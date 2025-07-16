@@ -50,23 +50,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### System.Object
+### System.Drawing.Point
 
-The Get-AU3WinCaretPos cmdlet retrieves the position of the text caret (cursor) within a window. This corresponds to the AutoIt WinGetCaretPos() function.
+A Point containing the caret coordinates.
 
 ## NOTES
 
-This cmdlet is based on the corresponding AutoIt function and provides Windows automation capabilities.
+This cmdlet is based on the WinGetCaretPos() AutoIt function and provides Windows automation capabilities.
 
 ## RELATED LINKS
 
-[AutoIt Documentation](https://www.autoitscript.com/autoit3/docs/)
-
-
-
-
-
-
-
-
-
+[Function Documentation](https://www.autoitscript.com/autoit3/docs/functions/WinGetCaretPos.htm)

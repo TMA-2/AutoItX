@@ -1,0 +1,99 @@
+{
+	"folders": [
+    {
+      "name": "AutoItX Source",
+      "path": "."
+    },
+    {
+      "name": "AutoItX Module",
+      "path": "../../PS/Modules/AutoItX"
+    }
+  ],
+	"settings": {
+    "explorer.incrementalNaming": "smart",
+    "explorer.fileNesting.enabled": true,
+    "editor.suggest.showStatusBar": true,
+    "explorer.fileNesting.patterns": {
+        "*.dll": "${basename}.xml, ${basename}.deps.json, ${basename}.pdb",
+        "*.xml": "${basename}.Platform.${extname}, ${basename}.dll-Help.${extname}, ${basename}.Custom.dll-Help.${extname}",
+        "*.psd1": "${capture}.psm1, ${capture}.ps1, ${capture}.format.ps1xml, ${capture}.types.ps1xml"
+    },
+    "files.exclude": {
+        "**/*.{exe,msi,jar}": true,
+        "**/{_manifest}": true,
+        "**/{.vs,obj,bin}": true,
+        "**/*.{pdb}": true,
+        "**/{de,es,fr,it,ja,ko,ru,zh-han[s-t]}": true
+    },
+    "git.decorations.enabled": true,
+    "git.countBadge": "all",
+    "xml.fileAssociations": [
+      {
+        "systemId": "https://raw.githubusercontent.com/TMA-2/Schemas/refs/heads/main/XmlDocumentation.xsd",
+        "pattern": "**/{Microsoft.*,System.*,AutoItX3.Assembly,mscorlib}.xml"
+      },
+      {
+        "systemId": "C:/Windows/Microsoft.NET/Framework64/v4.0.30319/MSBuild/Microsoft.Build.Core.xsd",
+        "pattern": "**/*.csproj"
+      },
+    ],
+    "powershell.cwd": "Module",
+    "powershell.powerShellDefaultVersion": "PowerShell (x64)",
+    "powershell.sideBar.CommandExplorerVisibility": false,
+    "powershell.codeFormatting.autoCorrectAliases": true,
+    "powershell.pester.codeLens": true,
+    "poshProTools.statusBar.performanceVisibility": false,
+    "winddown.postponeDurationMinutes": 30,
+    "git.autoRepositoryDetection": "openEditors",
+    "git.ignoredRepositories": [
+        "Shellify"
+    ],
+    "editor.tokenColorCustomizations": {
+      "[Atom One Dark]": {
+        "comments": "#707090"
+      }
+    },
+    "[json]": {
+        "editor.quickSuggestions": {
+            "strings": true
+        },
+      "editor.suggest.insertMode": "replace",
+        //   "editor.formatOnType": true,
+      "editor.detectIndentation": false,
+      "editor.insertSpaces": true,
+      "editor.tabSize": 2,
+      "editor.indentSize": "tabSize",
+    },
+    "[jsonc]": {
+        "editor.quickSuggestions": {
+            "strings": true
+        },
+      "editor.suggest.insertMode": "replace",
+        //   "editor.formatOnType": true,
+      "editor.detectIndentation": false,
+      "editor.insertSpaces": true,
+      "editor.tabSize": 2,
+      "editor.indentSize": "tabSize",
+    },
+    "[properties]": {
+        "editor.quickSuggestions": {
+            "strings": true
+        },
+      "editor.suggest.insertMode": "replace",
+        //   "editor.formatOnType": true,
+      "editor.detectIndentation": false,
+      "editor.insertSpaces": true,
+      "editor.tabSize": 2,
+      "editor.indentSize": "tabSize",
+    },
+    "[csharp]": {
+      "editor.maxTokenizationLineLength": 2500,
+      "editor.formatOnType": true,
+      "editor.insertSpaces": true,
+      "editor.detectIndentation": false,
+      "editor.tabSize": 4,
+      "editor.indentSize": 4,
+      "editor.autoIndentOnPaste": true
+    }
+    }
+}

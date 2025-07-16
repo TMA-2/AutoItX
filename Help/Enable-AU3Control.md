@@ -161,17 +161,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.String
 
-The Enable-AU3Control cmdlet enables a previously disabled control within a window, making it interactive for the user. The control is identified by its ID, ClassNameNN, or text within the specified window. This corresponds to the AutoIt ControlEnable() function.
+The title or text used to identify the target window or control.
 
 ### System.IntPtr
 
-The Enable-AU3Control cmdlet enables a previously disabled control within a window, making it interactive for the user. The control is identified by its ID, ClassNameNN, or text within the specified window. This corresponds to the AutoIt ControlEnable() function.
+A handle to the target window or control.
 
 ## OUTPUTS
 
-### System.Object
+### System.Int32
 
-The Enable-AU3Control cmdlet enables a previously disabled control within a window, making it interactive for the user. The control is identified by its ID, ClassNameNN, or text within the specified window. This corresponds to the AutoIt ControlEnable() function.
+1 on success, 0 on failure.
 
 ## NOTES
 

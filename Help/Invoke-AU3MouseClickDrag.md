@@ -177,26 +177,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### System.Object
+### System.Int32
 
-The Invoke-AU3MouseClickDrag cmdlet performs a mouse click and drag operation from one position to another. This corresponds to the AutoIt MouseClickDrag() function.
+1 on success, 0 on failure.
 
 ## NOTES
 
-This cmdlet is based on the corresponding AutoIt function and provides Windows automation capabilities.
+This cmdlet is based on the MouseClickDrag() AutoIt function and provides Windows automation capabilities.
 
 ## RELATED LINKS
 
-[AutoIt Documentation](https://www.autoitscript.com/autoit3/docs/)
-
-
-
-
-
-
-
-
-
-
-
-
+[Function Documentation](https://www.autoitscript.com/autoit3/docs/functions/MouseClickDrag.htm)

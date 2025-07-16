@@ -146,34 +146,26 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.String
 
-The Wait-AU3WinNotActive cmdlet waits for a window to become inactive before continuing. This corresponds to the AutoIt WinWaitNotActive() function.
+The title or text used to identify the target window or control.
+
+### System.Int32
+
+An integer value used as a parameter for the operation.
 
 ### System.IntPtr
 
-The Wait-AU3WinNotActive cmdlet waits for a window to become inactive before continuing. This corresponds to the AutoIt WinWaitNotActive() function.
+A handle to the target window or control.
 
 ## OUTPUTS
 
 ### System.Object
 
-The Wait-AU3WinNotActive cmdlet waits for a window to become inactive before continuing. This corresponds to the AutoIt WinWaitNotActive() function.
+1 if the window becomes inactive, 0 on timeout.
 
 ## NOTES
 
-This cmdlet is based on the corresponding AutoIt function and provides Windows automation capabilities.
+This cmdlet is based on the WinWaitNotActive() AutoIt function and provides Windows automation capabilities.
 
 ## RELATED LINKS
 
-[AutoIt Documentation](https://www.autoitscript.com/autoit3/docs/)
-
-
-
-
-
-
-
-
-
-
-
-
+[Function Documentation](https://www.autoitscript.com/autoit3/docs/functions/WinWaitNotActive.htm)

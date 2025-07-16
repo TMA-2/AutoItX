@@ -161,17 +161,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.String
 
-The Disable-AU3Control cmdlet disables a control within a window, making it non-interactive for the user. The control is identified by its ID, ClassNameNN, or text within the specified window. This corresponds to the AutoIt ControlDisable() function.
+The title or text used to identify the target window or control.
 
 ### System.IntPtr
 
-The Disable-AU3Control cmdlet disables a control within a window, making it non-interactive for the user. The control is identified by its ID, ClassNameNN, or text within the specified window. This corresponds to the AutoIt ControlDisable() function.
+A handle to the target window or control.
 
 ## OUTPUTS
 
-### System.Object
+### System.Int32
 
-The Disable-AU3Control cmdlet disables a control within a window, making it non-interactive for the user. The control is identified by its ID, ClassNameNN, or text within the specified window. This corresponds to the AutoIt ControlDisable() function.
+1 on success, 0 on failure.
 
 ## NOTES
 

@@ -113,28 +113,18 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.String
 
-The Get-AU3WinHandle cmdlet retrieves the window handle (HWND) of a window identified by title and optional text. This corresponds to the AutoIt WinGetHandle() function.
+The title or text used to identify the target window or control.
 
 ## OUTPUTS
 
-### System.Object
+### System.IntPtr
 
-The Get-AU3WinHandle cmdlet retrieves the window handle (HWND) of a window identified by title and optional text. This corresponds to the AutoIt WinGetHandle() function.
+The window handle as an IntPtr.
 
 ## NOTES
 
-This cmdlet is based on the corresponding AutoIt function and provides Windows automation capabilities.
+This cmdlet is based on the WinGetHandle() AutoIt function and provides Windows automation capabilities.
 
 ## RELATED LINKS
 
-[AutoIt Documentation](https://www.autoitscript.com/autoit3/docs/)
-
-
-
-
-
-
-
-
-
-
+[Function Documentation](https://www.autoitscript.com/autoit3/docs/functions/WinGetHandle.htm)

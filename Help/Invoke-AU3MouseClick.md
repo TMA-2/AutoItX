@@ -156,26 +156,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### System.Object
+### System.Int32
 
-The Invoke-AU3MouseClick cmdlet performs a mouse click at the specified coordinates or current mouse position. You can specify which mouse button to click, the number of clicks, and the speed of the mouse movement. This corresponds to the AutoIt MouseClick() function.
+1 on success, 0 on failure.
 
 ## NOTES
 
-This cmdlet is based on the corresponding AutoIt function and provides Windows automation capabilities.
+This cmdlet is based on the MouseClick() AutoIt function and provides Windows automation capabilities.
 
 ## RELATED LINKS
 
-[AutoIt Documentation](https://www.autoitscript.com/autoit3/docs/)
-
-
-
-
-
-
-
-
-
-
-
-
+[Function Documentation](https://www.autoitscript.com/autoit3/docs/functions/MouseClick.htm)

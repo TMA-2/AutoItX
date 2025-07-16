@@ -30,12 +30,33 @@ This cmdlet has no aliases.
 ## DESCRIPTION
 
 The Send-AU3Key cmdlet sends keystrokes to the currently active window. This corresponds to the AutoIt Send() function.
+Use the modifiers `!` for Alt, `+` for Shift, `^` for Control, and `#` for Windows. Most special keys are surrounded with curly braces, such as `{ENTER}`. For all special keys, refer to the [official documentation](https://www.autoitscript.com/autoit3/docs/functions/Send.htm).
 
 ## EXAMPLES
 
 ### Example 1
+```powershell
+Send-AU3Key -Key "Hello World"
+```
+This example sends the text "Hello World" to the active window.
 
-This example demonstrates basic usage of the Send-AU3Key cmdlet.
+### Example 2
+```powershell
+Send-AU3Key -Key "{ENTER}"
+```
+This example sends the Enter key to the active window.
+
+### Example 3
+```powershell
+Send-AU3Key -Key "^c"
+```
+This example sends Ctrl+C (copy) to the active window.
+
+### Example 4
+```powershell
+Send-AU3Key -Key "{ALT}fm" -Mode 1
+```
+This example sends Alt+F+M with raw mode enabled.
 
 ## PARAMETERS
 
@@ -92,26 +113,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### System.Object
-
-The Send-AU3Key cmdlet sends keystrokes to the currently active window. This corresponds to the AutoIt Send() function.
-
 ## NOTES
 
-This cmdlet is based on the corresponding AutoIt function and provides Windows automation capabilities.
+This cmdlet is based on the Send() AutoIt function and provides Windows automation capabilities.
 
 ## RELATED LINKS
 
-[AutoIt Documentation](https://www.autoitscript.com/autoit3/docs/)
-
-
-
-
-
-
-
-
-
-
-
-
+[Function Documentation](https://www.autoitscript.com/autoit3/docs/functions/Send.htm)

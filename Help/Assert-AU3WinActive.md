@@ -119,17 +119,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.String
 
-The Assert-AU3WinActive cmdlet checks whether a specified window is currently the active window. You can identify windows by their title and optional text content, or by using a window handle. This corresponds to the AutoIt WinActive() function.
+The title or text used to identify the target window or control.
 
 ### System.IntPtr
 
-The Assert-AU3WinActive cmdlet checks whether a specified window is currently the active window. You can identify windows by their title and optional text content, or by using a window handle. This corresponds to the AutoIt WinActive() function.
+A handle to the target window or control.
 
 ## OUTPUTS
 
-### System.Object
+### System.Int32
 
-The Assert-AU3WinActive cmdlet checks whether a specified window is currently the active window. You can identify windows by their title and optional text content, or by using a window handle. This corresponds to the AutoIt WinActive() function.
+1 if the window is active, 0 otherwise.
 
 ## NOTES
 

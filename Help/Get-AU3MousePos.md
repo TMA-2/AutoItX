@@ -50,23 +50,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### System.Object
+### System.Drawing.Point
 
-The Get-AU3MousePos cmdlet retrieves the current position of the mouse cursor on the screen. This corresponds to the AutoIt MouseGetPos() function.
+A Point containing the current position (x, y) of the mouse cursor.
 
 ## NOTES
 
-This cmdlet is based on the corresponding AutoIt function and provides Windows automation capabilities.
+This cmdlet is based on the MouseGetPos() AutoIt function and provides Windows automation capabilities.
 
 ## RELATED LINKS
 
-[AutoIt Documentation](https://www.autoitscript.com/autoit3/docs/)
-
-
-
-
-
-
-
-
-
+[Function Documentation](https://www.autoitscript.com/autoit3/docs/functions/MouseGetPos.htm)

@@ -113,30 +113,22 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.String
 
-The Invoke-AU3Run cmdlet runs an external program or command. This corresponds to the AutoIt Run() function.
+The title or text used to identify the target window or control.
+
+### System.Int32
+
+An integer value used as a parameter for the operation.
 
 ## OUTPUTS
 
 ### System.Object
 
-The Invoke-AU3Run cmdlet runs an external program or command. This corresponds to the AutoIt Run() function.
+The process ID (PID) of the launched program, 0 on failure.
 
 ## NOTES
 
-This cmdlet is based on the corresponding AutoIt function and provides Windows automation capabilities.
+This cmdlet is based on the Run() AutoIt function and provides Windows automation capabilities.
 
 ## RELATED LINKS
 
-[AutoIt Documentation](https://www.autoitscript.com/autoit3/docs/)
-
-
-
-
-
-
-
-
-
-
-
-
+[Function Documentation](https://www.autoitscript.com/autoit3/docs/functions/Run.htm)

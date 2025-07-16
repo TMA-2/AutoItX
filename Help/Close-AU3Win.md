@@ -144,18 +144,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.String
 
-The Close-AU3Win cmdlet closes a window identified by its title and optional text content, or by its window handle. You can optionally force the window to close if it doesn't respond to normal close requests. This corresponds to the AutoIt WinClose() function.
+The title or text used to identify the target window or control.
 
 ### System.IntPtr
 
-The Close-AU3Win cmdlet closes a window identified by its title and optional text content, or by its window handle. You can optionally force the window to close if it doesn't respond to normal close requests. This corresponds to the AutoIt WinClose() function.
+A handle to the target window or control.
 
 ## OUTPUTS
 
 ### System.Int32
 
-Success:    1.
-Failure:	0 if the window is not found.
+1 on success, 0 if the window is not found.
 
 ## NOTES
 

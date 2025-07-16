@@ -119,32 +119,22 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.String
 
-The Get-AU3WinClientSize cmdlet retrieves the size of the client area of a window (excluding title bar, borders, etc.). This corresponds to the AutoIt WinGetClientSize() function.
+The title or text used to identify the target window or control.
 
 ### System.IntPtr
 
-The Get-AU3WinClientSize cmdlet retrieves the size of the client area of a window (excluding title bar, borders, etc.). This corresponds to the AutoIt WinGetClientSize() function.
+A handle to the target window or control.
 
 ## OUTPUTS
 
 ### System.Object
 
-The Get-AU3WinClientSize cmdlet retrieves the size of the client area of a window (excluding title bar, borders, etc.). This corresponds to the AutoIt WinGetClientSize() function.
+A Size containing the client area dimensions.
 
 ## NOTES
 
-This cmdlet is based on the corresponding AutoIt function and provides Windows automation capabilities.
+This cmdlet is based on the WinGetClientSize() AutoIt function and provides Windows automation capabilities.
 
 ## RELATED LINKS
 
-[AutoIt Documentation](https://www.autoitscript.com/autoit3/docs/)
-
-
-
-
-
-
-
-
-
-
+[Function Documentation](https://www.autoitscript.com/autoit3/docs/functions/WinGetClientSize.htm)

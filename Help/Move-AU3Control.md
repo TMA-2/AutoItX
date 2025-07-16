@@ -271,34 +271,26 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.String
 
-The Move-AU3Control cmdlet moves and/or resizes a control within a window. This corresponds to the AutoIt ControlMove() function.
+The title or text used to identify the target window or control.
+
+### System.Int32
+
+An integer value used as a parameter for the operation.
 
 ### System.IntPtr
 
-The Move-AU3Control cmdlet moves and/or resizes a control within a window. This corresponds to the AutoIt ControlMove() function.
+A handle to the target window or control.
 
 ## OUTPUTS
 
-### System.Object
+### System.Int32
 
-The Move-AU3Control cmdlet moves and/or resizes a control within a window. This corresponds to the AutoIt ControlMove() function.
+1 on success, 0 on failure.
 
 ## NOTES
 
-This cmdlet is based on the corresponding AutoIt function and provides Windows automation capabilities.
+This cmdlet is based on the ControlMove() AutoIt function and provides Windows automation capabilities.
 
 ## RELATED LINKS
 
-[AutoIt Documentation](https://www.autoitscript.com/autoit3/docs/)
-
-
-
-
-
-
-
-
-
-
-
-
+[Function Documentation](https://www.autoitscript.com/autoit3/docs/functions/ControlMove.htm)

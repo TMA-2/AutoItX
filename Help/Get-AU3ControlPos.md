@@ -161,32 +161,22 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.String
 
-The Get-AU3ControlPos cmdlet retrieves the position and size information (X, Y, Width, Height) of a control within a window. This corresponds to the AutoIt ControlGetPos() function.
+The title or text used to identify the target window or control.
 
 ### System.IntPtr
 
-The Get-AU3ControlPos cmdlet retrieves the position and size information (X, Y, Width, Height) of a control within a window. This corresponds to the AutoIt ControlGetPos() function.
+A handle to the target window or control.
 
 ## OUTPUTS
 
-### System.Object
+### System.Drawing.Rectangle
 
-The Get-AU3ControlPos cmdlet retrieves the position and size information (X, Y, Width, Height) of a control within a window. This corresponds to the AutoIt ControlGetPos() function.
+A Rectangle containing the position (x, y) and size (width, height) properties of the control.
 
 ## NOTES
 
-This cmdlet is based on the corresponding AutoIt function and provides Windows automation capabilities.
+This cmdlet is based on the ControlGetPos() AutoIt function and provides Windows automation capabilities.
 
 ## RELATED LINKS
 
-[AutoIt Documentation](https://www.autoitscript.com/autoit3/docs/)
-
-
-
-
-
-
-
-
-
-
+[Function Documentation](https://www.autoitscript.com/autoit3/docs/functions/ControlGetPos.htm)

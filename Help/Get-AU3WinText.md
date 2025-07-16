@@ -119,32 +119,26 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.String
 
-The Get-AU3WinText cmdlet retrieves all visible text from a window. This corresponds to the AutoIt WinGetText() function.
+The title or text used to identify the target window or control.
+
+### System.Int32
+
+An integer value used as a parameter for the operation.
 
 ### System.IntPtr
 
-The Get-AU3WinText cmdlet retrieves all visible text from a window. This corresponds to the AutoIt WinGetText() function.
+A handle to the target window or control.
 
 ## OUTPUTS
 
-### System.Object
+### System.String
 
-The Get-AU3WinText cmdlet retrieves all visible text from a window. This corresponds to the AutoIt WinGetText() function.
+The text from the window as a string.
 
 ## NOTES
 
-This cmdlet is based on the corresponding AutoIt function and provides Windows automation capabilities.
+This cmdlet is based on the WinGetText() AutoIt function and provides Windows automation capabilities.
 
 ## RELATED LINKS
 
-[AutoIt Documentation](https://www.autoitscript.com/autoit3/docs/)
-
-
-
-
-
-
-
-
-
-
+[Function Documentation](https://www.autoitscript.com/autoit3/docs/functions/WinGetText.htm)
