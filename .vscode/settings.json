@@ -1,0 +1,32 @@
+{
+  "editor.detectIndentation": false,
+  "editor.autoIndentOnPaste": true,
+  "editor.autoIndent": "full",
+  "editor.formatOnType": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "modificationsIfAvailable",
+  "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?",
+  "debug.saveBeforeStart": "nonUntitledEditorsInActiveGroup",
+  "dotnet.enableXamlTools": false,
+  "[csharp]": {
+    "editor.detectIndentation": false,
+    "editor.tabSize": 4,
+    "editor.defaultFormatter": "ms-dotnettools.csharp",
+    "editor.defaultFoldingRangeProvider": "ms-dotnettools.csharp"
+  },
+  "[powershell]": {
+    "editor.detectIndentation": false,
+    "editor.tabSize": 4,
+    "editor.defaultFormatter": "ms-vscode.powershell",
+    "editor.defaultFoldingRangeProvider": "ms-vscode.powershell"
+  },
+  "[json]": {
+    "editor.detectIndentation": false,
+    "editor.tabSize": 2,
+  },
+  "[jsonc]": {
+    "editor.detectIndentation": false,
+    "editor.tabSize": 2,
+  },
+}

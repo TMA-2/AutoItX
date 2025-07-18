@@ -33,5 +33,5 @@ bld/
 *.nuget.props
 *.nuget.targets
 
-# Copilot-created documentation scripts
+# Copilot-created helper scripts
 HelpScripts/*.ps1

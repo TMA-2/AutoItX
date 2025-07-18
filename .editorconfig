@@ -9,10 +9,17 @@ indent_size = 4
 end_of_line = crlf
 charset = utf-8
 trim_trailing_whitespace = true
-insert_final_newline = false
+insert_final_newline = true
+
+[*.{json,jsonc,code-workspace}]
+indent_size = 2
+
+[*.md]
+trim_trailing_whitespace = false
+indent_size = 2
 
 #  CSharp formatting rules: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/
-[csharp,*.cs]
+[*.cs]
 csharp_new_line_before_open_brace = all
 csharp_new_line_before_else = true
 csharp_new_line_before_catch = true

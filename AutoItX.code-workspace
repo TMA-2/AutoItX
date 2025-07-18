@@ -1,29 +1,25 @@
 {
-	"folders": [
+  "folders": [
     {
-      "name": "AutoItX Source",
+      "name": "AutoItX",
       "path": "."
-    },
-    {
-      "name": "AutoItX Module",
-      "path": "../../PS/Modules/AutoItX"
     }
   ],
-	"settings": {
+  "settings": {
+    "editor.suggest.showStatusBar": true,
+    "editor.detectIndentation": false,
     "explorer.incrementalNaming": "smart",
     "explorer.fileNesting.enabled": true,
-    "editor.suggest.showStatusBar": true,
     "explorer.fileNesting.patterns": {
-        "*.dll": "${basename}.xml, ${basename}.deps.json, ${basename}.pdb",
-        "*.xml": "${basename}.Platform.${extname}, ${basename}.dll-Help.${extname}, ${basename}.Custom.dll-Help.${extname}",
-        "*.psd1": "${capture}.psm1, ${capture}.ps1, ${capture}.format.ps1xml, ${capture}.types.ps1xml"
+      "*.dll": "${basename}.xml, ${basename}.deps.json, ${basename}.pdb",
+      "*.xml": "${basename}.Platform.${extname}, ${basename}.dll-Help.${extname}, ${basename}.Custom.dll-Help.${extname}",
+      "*.psd1": "${capture}.psm1, ${capture}.ps1, ${capture}.format.ps1xml, ${capture}.types.ps1xml"
     },
+    "explorer.excludeGitIgnore": true,
     "files.exclude": {
-        "**/*.{exe,msi,jar}": true,
-        "**/{_manifest}": true,
-        "**/{.vs,obj,bin}": true,
-        "**/*.{pdb}": true,
-        "**/{de,es,fr,it,ja,ko,ru,zh-han[s-t]}": true
+      "**/{_manifest}": true,
+      "**/{.vs,obj,bin}": true,
+      "**/{de,es,fr,it,ja,ko,ru,zh-han[s-t]}": true
     },
     "git.decorations.enabled": true,
     "git.countBadge": "all",
@@ -37,63 +33,42 @@
         "pattern": "**/*.csproj"
       },
     ],
-    "powershell.cwd": "Module",
+    "powershell.cwd": "AutoItX",
     "powershell.powerShellDefaultVersion": "PowerShell (x64)",
-    "powershell.sideBar.CommandExplorerVisibility": false,
     "powershell.codeFormatting.autoCorrectAliases": true,
-    "powershell.pester.codeLens": true,
+    "powershell.pester.codeLens": false, // for Pester extension compatibility
     "poshProTools.statusBar.performanceVisibility": false,
-    "winddown.postponeDurationMinutes": 30,
     "git.autoRepositoryDetection": "openEditors",
-    "git.ignoredRepositories": [
-        "Shellify"
-    ],
-    "editor.tokenColorCustomizations": {
-      "[Atom One Dark]": {
-        "comments": "#707090"
-      }
-    },
-    "[json]": {
-        "editor.quickSuggestions": {
-            "strings": true
-        },
-      "editor.suggest.insertMode": "replace",
-        //   "editor.formatOnType": true,
-      "editor.detectIndentation": false,
-      "editor.insertSpaces": true,
-      "editor.tabSize": 2,
-      "editor.indentSize": "tabSize",
-    },
-    "[jsonc]": {
-        "editor.quickSuggestions": {
-            "strings": true
-        },
-      "editor.suggest.insertMode": "replace",
-        //   "editor.formatOnType": true,
-      "editor.detectIndentation": false,
-      "editor.insertSpaces": true,
-      "editor.tabSize": 2,
-      "editor.indentSize": "tabSize",
-    },
-    "[properties]": {
-        "editor.quickSuggestions": {
-            "strings": true
-        },
-      "editor.suggest.insertMode": "replace",
-        //   "editor.formatOnType": true,
-      "editor.detectIndentation": false,
-      "editor.insertSpaces": true,
-      "editor.tabSize": 2,
-      "editor.indentSize": "tabSize",
-    },
     "[csharp]": {
-      "editor.maxTokenizationLineLength": 2500,
+      "editor.maxTokenizationLineLength": 1000,
       "editor.formatOnType": true,
-      "editor.insertSpaces": true,
       "editor.detectIndentation": false,
       "editor.tabSize": 4,
-      "editor.indentSize": 4,
       "editor.autoIndentOnPaste": true
     }
-    }
+  },
+  "extensions": {
+    "recommendations": [
+      // Csharp, .NET
+      "ms-dotnettools.csharp",
+      "ms-dotnettools.csdevkit",
+      "ms-dotnettools.vscode-dotnet-runtime",
+      "tintoy.msbuild-project-tools",
+      "fernandoescolar.vscode-solution-explorer",
+      "formulahendry.dotnet-test-explorer",
+      // PowerShell
+      "ms-vscode.powershell",
+      "TylerLeonhardt.vscode-inline-values-powershell",
+      "pspester.pester-test",
+      // XML
+      "redhat.vscode-xml",
+      "DotJoshJohnson.xml",
+      // Other
+      "EditorConfig.EditorConfig",
+      "vsls-contrib.codetour",
+      "Damien.autoit",
+      "yzhang.markdown-all-in-one",
+      "george-alisson.html-preview-vscode"
+    ],
+  },
 }

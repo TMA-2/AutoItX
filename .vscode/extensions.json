@@ -1,0 +1,24 @@
+{
+  "recommendations": [
+    // Csharp, .NET
+    "ms-dotnettools.csharp",
+    "ms-dotnettools.csdevkit",
+    "ms-dotnettools.vscode-dotnet-runtime",
+    "tintoy.msbuild-project-tools",
+    "fernandoescolar.vscode-solution-explorer",
+    "formulahendry.dotnet-test-explorer",
+    // PowerShell
+    "ms-vscode.powershell",
+    "TylerLeonhardt.vscode-inline-values-powershell",
+    "pspester.pester-test",
+    // XML
+    "redhat.vscode-xml",
+    "DotJoshJohnson.xml",
+    // Other
+    "EditorConfig.EditorConfig",
+    "vsls-contrib.codetour",
+    "Damien.autoit",
+    "yzhang.markdown-all-in-one",
+    "george-alisson.html-preview-vscode"
+  ]
+}
