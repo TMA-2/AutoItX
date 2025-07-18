@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36301.6 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoItX3.PowerShell", "AutoItX3.PowerShell\AutoItX3.PowerShell.csproj", "{9DA502A8-5FF1-C6F2-69DC-267D1F099390}"
+	ProjectSection(ProjectDependencies) = postProject
+		{999615DB-10ED-F9A1-C165-4ADE28DC9B29} = {999615DB-10ED-F9A1-C165-4ADE28DC9B29}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoItX3.Assembly", "AutoItX3.Assembly\AutoItX3.Assembly.csproj", "{999615DB-10ED-F9A1-C165-4ADE28DC9B29}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9DA502A8-5FF1-C6F2-69DC-267D1F099390}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DA502A8-5FF1-C6F2-69DC-267D1F099390}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DA502A8-5FF1-C6F2-69DC-267D1F099390}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DA502A8-5FF1-C6F2-69DC-267D1F099390}.Release|Any CPU.Build.0 = Release|Any CPU
+		{999615DB-10ED-F9A1-C165-4ADE28DC9B29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{999615DB-10ED-F9A1-C165-4ADE28DC9B29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{999615DB-10ED-F9A1-C165-4ADE28DC9B29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{999615DB-10ED-F9A1-C165-4ADE28DC9B29}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D65985EB-D448-4809-A605-0E8185C1DCF9}
+	EndGlobalSection
+EndGlobal

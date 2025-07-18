@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>AutoItX3.Assembly</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <TargetFramework>net48</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>12.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup />
+  <ItemGroup />
+    <!-- <Reference Update="AutoItX3.dll">
+      <Private>true</Private>
+      <HintPath>..\Module\AutoItX3.dll</HintPath>
+    </Reference>
+    <Reference Update="AutoItX3_x64.dll">
+      <Private>true</Private>
+      <HintPath>..\Module\AutoItX3_x64.dll</HintPath>
+    </Reference>
+  </ItemGroup> -->
+</Project>

@@ -15,7 +15,7 @@
       "*.xml": "${basename}.Platform.${extname}, ${basename}.dll-Help.${extname}, ${basename}.Custom.dll-Help.${extname}",
       "*.psd1": "${capture}.psm1, ${capture}.ps1, ${capture}.format.ps1xml, ${capture}.types.ps1xml"
     },
-    "explorer.excludeGitIgnore": true,
+    "explorer.excludeGitIgnore": false,
     "files.exclude": {
       "**/{_manifest}": true,
       "**/{.vs,obj,bin}": true,
@@ -23,6 +23,7 @@
     },
     "git.decorations.enabled": true,
     "git.countBadge": "all",
+    "git.autoRepositoryDetection": "openEditors",
     "xml.fileAssociations": [
       {
         "systemId": "https://raw.githubusercontent.com/TMA-2/Schemas/refs/heads/main/XmlDocumentation.xsd",
@@ -38,7 +39,7 @@
     "powershell.codeFormatting.autoCorrectAliases": true,
     "powershell.pester.codeLens": false, // for Pester extension compatibility
     "poshProTools.statusBar.performanceVisibility": false,
-    "git.autoRepositoryDetection": "openEditors",
+    "dotnet.defaultSolution": "${workspaceFolder}/AutoItX3.PowerShell.sln",
     "[csharp]": {
       "editor.maxTokenizationLineLength": 1000,
       "editor.formatOnType": true,
