@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>Method IsAdmin</title>
+<meta charset="utf-8">
+<link href="../../css/default.css" rel="stylesheet">
+</head>
+
+<body>
+<h1 class="small">Method Reference</h1>
+<hr style="height:0px">
+<h1>IsAdmin</h1>
+<p class="funcdesc">Checks if the current user has administrator privileges<br /></p>
+<p class="codeheader">
+IsAdmin<br />
+</p>
+
+<h2>Return Value</h2>
+<table class="noborder">
+<tr>
+<td style="width:10%" class="valign-top">Success:</td>
+<td style="width:90%">Returns 1 if the current user has administrator privileges.</td>
+</tr>
+<tr>
+<td class="valign-top">Failure:</td>
+<td>Returns 0 if user lacks admin privileges.</td>
+</tr>
+</table>
+
+<h2>Remarks</h2>
+<p>This function will always return 1 under Window 95/98/Me.<br />
+</p>
+
+<h2>Related</h2>
+<p><a href="RunAs.htm">RunAs</a>, <a href="RunAsWait.htm">RunAsWait</a></p>
+
+<h2 class="bottom">Example</h2>
+<script type="text/javascript">
+if ((navigator.appName == "Microsoft Internet Explorer") && (parseInt(navigator.appVersion) >= 4)) // IE (4+) only
+function copyToClipboard(section) {
+if (window.clipboardData && clipboardData.setData) {
+clipboardData.setData("text", section + "\r\n");
+alert("Copied to clipboard");
+}
+}
+</script>
+<div class="codeSnippetContainer">
+<br />
+<div class="codeSnippetContainerCodeContainer">
+<div class="codeSnippetToolBar">
+<div class="codeSnippetToolBarText">
+<script type="text/javascript">
+if ((navigator.appName == "Microsoft Internet Explorer") && (parseInt(navigator.appVersion) >= 4)) // IE (4+) only
+document.write('<a href="#" id="copy" onclick="copyToClipboard(document.getElementById(\'copytext1\').innerText)">Copy to clipboard<\/a>');
+</script>
+</div>
+</div>
+<div class="codeSnippetContainerCode" dir="ltr" id="copytext1">
+<pre>
+<span>Set oAutoIt = WScript.CreateObject("AutoItX3.Control")
+
+If oAutoIt.IsAdmin Then WScript.Echo "Admin rights detected"
+</span><br />
+</pre>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>Method WinMenuSelectItem</title>
+<meta charset="utf-8">
+<link href="../../css/default.css" rel="stylesheet">
+</head>
+
+<body>
+<h1 class="small">Method Reference</h1>
+<hr style="height:0px">
+<h1>WinMenuSelectItem</h1>
+<p class="funcdesc">Invokes a menu item of a window<br /></p>
+<p class="codeheader">
+WinMenuSelectItem "title", "text", "item" [, "item" [, "item" [, "item" [, "item" [, "item" [, "item"]]]]]]<br />
+</p>
+
+<h2>Parameters</h2>
+<table>
+<tr>
+<td style="width:15%">title</td>
+<td style="width:85%">The title of the window to read.</td>
+</tr>
+<tr>
+<td>text</td>
+<td>The text of the window to read.</td>
+</tr>
+<tr>
+<td>item</td>
+<td>Text of Menu Item</td>
+</tr>
+<tr>
+<td>item</td>
+<td><strong>Optional:</strong> Text of SubMenu item</td>
+</tr>
+<tr>
+<td>item</td>
+<td><strong>Optional:</strong> Text of SubMenu item</td>
+</tr>
+<tr>
+<td>item</td>
+<td><strong>Optional:</strong> Text of SubMenu item</td>
+</tr>
+<tr>
+<td>item</td>
+<td><strong>Optional:</strong> Text of SubMenu item</td>
+</tr>
+<tr>
+<td>item</td>
+<td><strong>Optional:</strong> Text of SubMenu item</td>
+</tr>
+<tr>
+<td>item</td>
+<td><strong>Optional:</strong> Text of SubMenu item</td>
+</tr>
+</table>
+
+<h2>Return Value</h2>
+<table class="noborder">
+<tr>
+<td style="width:10%" class="valign-top">Success:</td>
+<td style="width:90%">Returns 1.</td>
+</tr>
+<tr>
+<td class="valign-top">Failure:</td>
+<td>Returns 0 if the menu could not be found.</td>
+</tr>
+</table>
+
+<h2>Remarks</h2>
+<p>You should note that underlined menu items actually contain a & character to indicate the underlining. Thus, the menu item <strong><u>F</u>ile</strong> would actually require the text "&File", and <strong>Con<u>v</u>ert</strong> would require "Con&vert" You can access menu items up to six levels deep; and the window can be inactive, minimized, and/or even hidden.<br />
+<br />
+WinMenuSelectItem will only work on standard menus. Unfortunately, many menus in use today are actually custom written or toolbars "pretending" to be menus. This is true for most Microsoft applications.<br />
+</p>
+
+<h2>Related</h2>
+<p><a href="ControlCommand.htm">ControlCommand</a>, <a href="Send.htm">Send</a></p>
+
+<h2 class="bottom">Example</h2>
+<script type="text/javascript">
+if ((navigator.appName == "Microsoft Internet Explorer") && (parseInt(navigator.appVersion) >= 4)) // IE (4+) only
+function copyToClipboard(section) {
+if (window.clipboardData && clipboardData.setData) {
+clipboardData.setData("text", section + "\r\n");
+alert("Copied to clipboard");
+}
+}
+</script>
+<div class="codeSnippetContainer">
+<br />
+<div class="codeSnippetContainerCodeContainer">
+<div class="codeSnippetToolBar">
+<div class="codeSnippetToolBarText">
+<script type="text/javascript">
+if ((navigator.appName == "Microsoft Internet Explorer") && (parseInt(navigator.appVersion) >= 4)) // IE (4+) only
+document.write('<a href="#" id="copy" onclick="copyToClipboard(document.getElementById(\'copytext1\').innerText)">Copy to clipboard<\/a>');
+</script>
+</div>
+</div>
+<div class="codeSnippetContainerCode" dir="ltr" id="copytext1">
+<pre>
+<span>Set oAutoIt = WScript.CreateObject("AutoItX3.Control")
+
+' This will select File, Page Setup in notepad
+oAutoIt.WinMenuSelectItem "Untitled - ", "", "&amp;File", "Page Set&amp;up..."
+</span><br />
+</pre>
+</div>
+</div>
+</div>
+</body>
+</html>

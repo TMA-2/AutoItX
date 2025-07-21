@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>Method MouseGetCursor</title>
+<meta charset="utf-8">
+<link href="../../css/default.css" rel="stylesheet">
+</head>
+
+<body>
+<h1 class="small">Method Reference</h1>
+<hr style="height:0px">
+<h1>MouseGetCursor</h1>
+<p class="funcdesc">Returns a cursor ID Number of the current Mouse Cursor<br /></p>
+<p class="codeheader">
+MouseGetCursor<br />
+</p>
+
+<h2>Return Value</h2>
+Returns&nbsp;a cursor ID Number:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;= UNKNOWN (this includes pointing and grabbing hand icons)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;= APPSTARTING<br />
+&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;= ARROW<br />
+&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;= CROSS<br />
+&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;= HELP<br />
+&nbsp;&nbsp;&nbsp;&nbsp;5&nbsp;= IBEAM<br />
+&nbsp;&nbsp;&nbsp;&nbsp;6&nbsp;= ICON<br />
+&nbsp;&nbsp;&nbsp;&nbsp;7&nbsp;= NO<br />
+&nbsp;&nbsp;&nbsp;&nbsp;8&nbsp;= SIZE<br />
+&nbsp;&nbsp;&nbsp;&nbsp;9&nbsp;= SIZEALL<br />
+&nbsp;&nbsp;&nbsp;&nbsp;10&nbsp;= SIZENESW<br />
+&nbsp;&nbsp;&nbsp;&nbsp;11&nbsp;= SIZENS<br />
+&nbsp;&nbsp;&nbsp;&nbsp;12&nbsp;= SIZENWSE<br />
+&nbsp;&nbsp;&nbsp;&nbsp;13&nbsp;= SIZEWE<br />
+&nbsp;&nbsp;&nbsp;&nbsp;14&nbsp;= UPARROW<br />
+&nbsp;&nbsp;&nbsp;&nbsp;15&nbsp;= WAIT<br />
+
+
+<h2>Related</h2>
+<p><a href="MouseGetPosX.htm">MouseGetPosX</a>, <a href="MouseGetPosY.htm">MouseGetPosY</a></p>
+
+<h2 class="bottom">Example</h2>
+<script type="text/javascript">
+if ((navigator.appName == "Microsoft Internet Explorer") && (parseInt(navigator.appVersion) >= 4)) // IE (4+) only
+function copyToClipboard(section) {
+if (window.clipboardData && clipboardData.setData) {
+clipboardData.setData("text", section + "\r\n");
+alert("Copied to clipboard");
+}
+}
+</script>
+<div class="codeSnippetContainer">
+<br />
+<div class="codeSnippetContainerCodeContainer">
+<div class="codeSnippetToolBar">
+<div class="codeSnippetToolBarText">
+<script type="text/javascript">
+if ((navigator.appName == "Microsoft Internet Explorer") && (parseInt(navigator.appVersion) >= 4)) // IE (4+) only
+document.write('<a href="#" id="copy" onclick="copyToClipboard(document.getElementById(\'copytext1\').innerText)">Copy to clipboard<\/a>');
+</script>
+</div>
+</div>
+<div class="codeSnippetContainerCode" dir="ltr" id="copytext1">
+<pre>
+<span>Set oAutoIt = WScript.CreateObject("AutoItX3.Control")
+
+oAutoIt.Sleep 2000 &nbsp;'allow time to move mouse before reporting ID
+cursor = oAutoIt.MouseGetCursor()
+WScript.Echo "ID = " &amp; cursor
+</span><br />
+</pre>
+</div>
+</div>
+</div>
+</body>
+</html>

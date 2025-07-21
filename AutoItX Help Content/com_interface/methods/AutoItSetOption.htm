@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>Method AutoItSetOption</title>
+<meta charset="utf-8">
+<link href="../../css/default.css" rel="stylesheet">
+</head>
+
+<body>
+<h1 class="small">Method Reference</h1>
+<hr style="height:0px">
+<h1>AutoItSetOption</h1>
+<p class="funcdesc">Changes the operation of various AutoIt functions/parameters<br /></p>
+<p class="codeheader">
+AutoItSetOption "option", param<br />
+</p>
+
+<h2>Parameters</h2>
+<table>
+<tr>
+<td style="width:15%">option</td>
+<td style="width:85%">The option to change. See Remarks.</td>
+</tr>
+<tr>
+<td>param</td>
+<td>The parameter (varies by option). See Remarks.</td>
+</tr>
+</table>
+
+<h2>Return Value</h2>
+Returns&nbsp;the value of the previous setting.<br />
+
+
+<h2>Remarks</h2>
+<p>You may use Opt as an alternative to AutoItSetOption.<br />
+<br />
+AutoIt will halt with an error message if the requested option is unknown. Options are as follows:<br />
+<table>
+<tr>
+<td style="width:15%"><strong>Option</strong></td>
+<td style="width:85%"><strong>Param</strong></td>
+</tr>
+<tr>
+<td>CaretCoordMode</td>
+<td><a id="CaretCoordMode"></a>Sets the way coords are used in the caret functions, either absolute coords or coords relative to the current active window:<br />
+0 = relative coords to the active window<br />
+1 = absolute screen coordinates (default)<br />
+2 = relative coords to the client area of the active window</td>
+</tr>
+<tr>
+<td>MouseClickDelay</td>
+<td><a id="MouseClickDelay"></a>Alters the length of the brief pause in between mouse clicks.<br />
+Time in milliseconds to pause (default=10).</td>
+</tr>
+<tr>
+<td>MouseClickDownDelay</td>
+<td><a id="MouseClickDownDelay"></a>Alters the length a click is held down before release.<br />
+Time in milliseconds to pause (default=10).</td>
+</tr>
+<tr>
+<td>MouseClickDragDelay</td>
+<td><a id="MouseClickDragDelay"></a>Alters the length of the brief pause at the start and end of a mouse drag operation.<br />
+Time in milliseconds to pause (default=250).</td>
+</tr>
+<tr>
+<td>MouseCoordMode</td>
+<td><a id="MouseCoordMode"></a>Sets the way coords are used in the mouse functions, either absolute coords or coords relative to the current active window:<br />
+0 = relative coords to the active window<br />
+1 = absolute screen coordinates (default)<br />
+2 = relative coords to the client area of the active window</td>
+</tr>
+<tr>
+<td>PixelCoordMode</td>
+<td><a id="PixelCoordMode"></a>Sets the way coords are used in the pixel functions, either absolute coords or coords relative to the current active window:<br />
+0 = relative coords to the active window<br />
+1 = absolute screen coordinates (default)<br />
+2 = relative coords to the client area of the active window</td>
+</tr>
+<tr>
+<td>SendAttachMode</td>
+<td><a id="SendAttachMode"></a>Specifies if AutoIt attaches input threads when using then Send() function. When not attaching (default mode=0) detecting the state of capslock/scrolllock and numlock can be unreliable under NT4. However, when you specify attach mode=1 the Send("{... down/up}") syntax will not work and there may be problems with sending keys to "hung" windows. ControlSend() ALWAYS attaches and is not affected by this mode.<br />
+0 = don't attach (default)<br />
+1 = attach</td>
+</tr>
+<tr>
+<td>SendCapslockMode</td>
+<td><a id="SendCapslockMode"></a>Specifies if AutoIt should store the state of capslock before a Send function and restore it afterwards.<br />
+0 = don't store/restore<br />
+1 = store and restore (default)</td>
+</tr>
+<tr>
+<td>SendKeyDelay</td>
+<td><a id="SendKeyDelay"></a>Alters the the length of the brief pause in between sent keystrokes.<br />
+Time in milliseconds to pause (default=5). Sometimes a value of 0 does not work; use 1 instead.</td>
+</tr>
+<tr>
+<td>SendKeyDownDelay</td>
+<td><a id="SendKeyDownDelay"></a>Alters the length of time a key is held down before released during a keystroke. For applications that take a while to register keypresses (and many games) you may need to raise this value from the default.<br />
+Time in milliseconds to pause (default=1).</td>
+</tr>
+<tr>
+<td>WinDetectHiddenText</td>
+<td><a id="WinDetectHiddenText"></a>Specifies if hidden window text can be "seen" by the window matching functions.<br />
+0 = Do not detect hidden text (default)<br />
+1 = Detect hidden text</td>
+</tr>
+<tr>
+<td>WinSearchChildren</td>
+<td><a id="WinSearchChildren"></a>Allows the window search routines to search child windows as well as top-level windows.<br />
+0 = Only search top-level windows (default)<br />
+1 = Search top-level and child windows</td>
+</tr>
+<tr>
+<td>WinTextMatchMode</td>
+<td><a id="WinTextMatchMode"></a>Alters the method that is used to match window text during search operations.<br />
+1 = Complete / Slow mode (default)<br />
+2 = Quick mode<br />
+In quick mode AutoIt can usually only "see" dialog text, button text and the captions of some controls. In the default mode much more text can be seen (for instance the contents of the Notepad window).<br />
+If you are having performance problems when performing many window searches then changing to the "quick" mode may help.</td>
+</tr>
+<tr>
+<td>WinTitleMatchMode</td>
+<td><a id="WinTitleMatchMode"></a>Alters the method that is used to match window titles during search operations.<br />
+1 = Match the title from the start (default)<br />
+2 = Match any substring in the title<br />
+3 = Exact title match<br />
+4 = Advanced mode, see <a href="../../intro/windowsadvanced.htm">Window Titles & Text (Advanced)</a></td>
+</tr>
+<tr>
+<td>WinWaitDelay</td>
+<td><a id="WinWaitDelay"></a>Alters how long a script should briefly pause after a successful window-related operation.<br />
+Time in milliseconds to pause (default=250).</td>
+</tr>
+</table></p>
+
+<h2 class="bottom">Example</h2>
+<script type="text/javascript">
+if ((navigator.appName == "Microsoft Internet Explorer") && (parseInt(navigator.appVersion) >= 4)) // IE (4+) only
+function copyToClipboard(section) {
+if (window.clipboardData && clipboardData.setData) {
+clipboardData.setData("text", section + "\r\n");
+alert("Copied to clipboard");
+}
+}
+</script>
+<div class="codeSnippetContainer">
+<br />
+<div class="codeSnippetContainerCodeContainer">
+<div class="codeSnippetToolBar">
+<div class="codeSnippetToolBarText">
+<script type="text/javascript">
+if ((navigator.appName == "Microsoft Internet Explorer") && (parseInt(navigator.appVersion) >= 4)) // IE (4+) only
+document.write('<a href="#" id="copy" onclick="copyToClipboard(document.getElementById(\'copytext1\').innerText)">Copy to clipboard<\/a>');
+</script>
+</div>
+</div>
+<div class="codeSnippetContainerCode" dir="ltr" id="copytext1">
+<pre>
+<span>Set oAutoIt = WScript.CreateObject("AutoItX3.Control")
+oldvalue = oAutoIt.Opt("SendAttachMode", 0)
+</span><br />
+</pre>
+</div>
+</div>
+</div>
+</body>
+</html>

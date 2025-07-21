@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>Method WinGetClientSizeWidth</title>
+<meta charset="utf-8">
+<link href="../../css/default.css" rel="stylesheet">
+</head>
+
+<body>
+<h1 class="small">Method Reference</h1>
+<hr style="height:0px">
+<h1>WinGetClientSizeWidth</h1>
+<p class="funcdesc">Retrieves the size of a given window's client area<br /></p>
+<p class="codeheader">
+WinGetClientSizeWidth "title" [, "text"]<br />
+</p>
+
+<h2>Parameters</h2>
+<table>
+<tr>
+<td style="width:15%">title</td>
+<td style="width:85%">The title of the window to read.</td>
+</tr>
+<tr>
+<td>text</td>
+<td><strong>Optional:</strong> The text of the window to read.</td>
+</tr>
+</table>
+
+<h2>Return Value</h2>
+<table class="noborder">
+<tr>
+<td style="width:10%" class="valign-top">Success:</td>
+<td style="width:90%">Returns the width of the window's client area</td>
+</tr>
+<tr>
+<td class="valign-top">Failure:</td>
+<td>Returns numeric 1 and sets oAutoIt.error to 1 if windows is not found.</td>
+</tr>
+</table>
+
+<h2>Remarks</h2>
+<p>If the window is minimized, the returned width and height values are both zero. However, WinGetClientSize works correctly on (non-minimized) hidden windows. If the window title "Program Manager" is used, the function will return the size of the desktop. WinGetClientSize("") matches the active window. If multiple windows match the criteria, the most recently active window is used.<br />
+</p>
+
+<h2>Related</h2>
+<p><a href="WinGetPosX.htm">WinGetPosX</a>, <a href="WinGetPosY.htm">WinGetPosY</a>, <a href="WinMove.htm">WinMove</a></p>
+
+<h2 class="bottom">Example</h2>
+<script type="text/javascript">
+if ((navigator.appName == "Microsoft Internet Explorer") && (parseInt(navigator.appVersion) >= 4)) // IE (4+) only
+function copyToClipboard(section) {
+if (window.clipboardData && clipboardData.setData) {
+clipboardData.setData("text", section + "\r\n");
+alert("Copied to clipboard");
+}
+}
+</script>
+<div class="codeSnippetContainer">
+<br />
+<div class="codeSnippetContainerCodeContainer">
+<div class="codeSnippetToolBar">
+<div class="codeSnippetToolBarText">
+<script type="text/javascript">
+if ((navigator.appName == "Microsoft Internet Explorer") && (parseInt(navigator.appVersion) >= 4)) // IE (4+) only
+document.write('<a href="#" id="copy" onclick="copyToClipboard(document.getElementById(\'copytext1\').innerText)">Copy to clipboard<\/a>');
+</script>
+</div>
+</div>
+<div class="codeSnippetContainerCode" dir="ltr" id="copytext1">
+<pre>
+<span>Set oAutoIt = WScript.CreateObject("AutoItX3.Control")
+
+width = oAutoIt.WinGetClientSizeWidth("")
+height = oAutoIt.WinGetClientSizeHeight("")
+</span><br />
+</pre>
+</div>
+</div>
+</div>
+</body>
+</html>

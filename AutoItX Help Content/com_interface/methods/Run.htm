@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>Method Run</title>
+<meta charset="utf-8">
+<link href="../../css/default.css" rel="stylesheet">
+</head>
+
+<body>
+<h1 class="small">Method Reference</h1>
+<hr style="height:0px">
+<h1>Run</h1>
+<p class="funcdesc">Runs an external program<br /></p>
+<p class="codeheader">
+Run "filename" [, "workingdir" [, show_flag]]<br />
+</p>
+
+<h2>Parameters</h2>
+<table>
+<tr>
+<td style="width:15%">filename</td>
+<td style="width:85%">The name of the executable (EXE, BAT, COM, or PIF) to run.</td>
+</tr>
+<tr>
+<td>workingdir</td>
+<td><strong>Optional:</strong> The working directory.</td>
+</tr>
+<tr>
+<td>show_flag</td>
+<td><strong>Optional:</strong> The "show" flag of the executed program:<br />
+SW_HIDE = Hidden window<br />
+SW_MINIMIZE = Minimized window<br />
+SW_MAXIMIZE = Maximized window<br />
+SW_SHOW = Show window<br />
+SW_SHOWNORMAL = Show window (default)</td>
+</tr>
+</table>
+
+<h2>Return Value</h2>
+Success:	The&nbsp;PID of the process that was launched.<br />
+Failure:	see&nbsp;Remarks.<br />
+
+
+<h2>Remarks</h2>
+<p>After running the requested program the script continues. To pause execution of the script until the spawned program has finished use the RunWait function instead.<br />
+<br />
+The <strong>error</strong> property is set to 1 as an indication of failure.<br />
+</p>
+
+<h2>Related</h2>
+<p><a href="RunAs.htm">RunAs</a>, <a href="RunAsWait.htm">RunAsWait</a>, <a href="RunWait.htm">RunWait</a></p>
+
+<h2 class="bottom">Example</h2>
+<script type="text/javascript">
+if ((navigator.appName == "Microsoft Internet Explorer") && (parseInt(navigator.appVersion) >= 4)) // IE (4+) only
+function copyToClipboard(section) {
+if (window.clipboardData && clipboardData.setData) {
+clipboardData.setData("text", section + "\r\n");
+alert("Copied to clipboard");
+}
+}
+</script>
+<div class="codeSnippetContainer">
+<br />
+<div class="codeSnippetContainerCodeContainer">
+<div class="codeSnippetToolBar">
+<div class="codeSnippetToolBarText">
+<script type="text/javascript">
+if ((navigator.appName == "Microsoft Internet Explorer") && (parseInt(navigator.appVersion) >= 4)) // IE (4+) only
+document.write('<a href="#" id="copy" onclick="copyToClipboard(document.getElementById(\'copytext1\').innerText)">Copy to clipboard<\/a>');
+</script>
+</div>
+</div>
+<div class="codeSnippetContainerCode" dir="ltr" id="copytext1">
+<pre>
+<span>Set oAutoIt = WScript.CreateObject("AutoItX3.Control")
+oAutoIt.Run "Notepad.exe", "", oAutoIt.SW_SHOWNORMAL
+</span><br />
+</pre>
+</div>
+</div>
+</div>
+</body>
+</html>

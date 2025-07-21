@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>Method WinList</title>
+<meta charset="utf-8">
+<link href="../../css/default.css" rel="stylesheet">
+</head>
+
+<body>
+<h1 class="small">Method Reference</h1>
+<hr style="height:0px">
+<h1>WinList</h1>
+<p class="funcdesc">Retrieves a list of windows<br /></p>
+<p class="codeheader">
+WinList "title" [, "text"]<br />
+</p>
+
+<h2>Parameters</h2>
+<table>
+<tr>
+<td style="width:15%">title</td>
+<td style="width:85%">The title of the window to find.</td>
+</tr>
+<tr>
+<td>text</td>
+<td><strong>Optional:</strong> The text of the window to find.</td>
+</tr>
+</table>
+
+<h2>Return Value</h2>
+<table class="noborder">
+<tr>
+<td style="width:10%" class="valign-top">Success:</td>
+<td style="width:90%">Returns a 2 dimensional array containing the window titles and corresponding handles. The number of entries is in element 0,0 (see example).</td>
+</tr>
+</table>
+
+<h2 class="bottom">Example</h2>
+<script type="text/javascript">
+if ((navigator.appName == "Microsoft Internet Explorer") && (parseInt(navigator.appVersion) >= 4)) // IE (4+) only
+function copyToClipboard(section) {
+if (window.clipboardData && clipboardData.setData) {
+clipboardData.setData("text", section + "\r\n");
+alert("Copied to clipboard");
+}
+}
+</script>
+<div class="codeSnippetContainer">
+<br />
+<div class="codeSnippetContainerCodeContainer">
+<div class="codeSnippetToolBar">
+<div class="codeSnippetToolBarText">
+<script type="text/javascript">
+if ((navigator.appName == "Microsoft Internet Explorer") && (parseInt(navigator.appVersion) >= 4)) // IE (4+) only
+document.write('<a href="#" id="copy" onclick="copyToClipboard(document.getElementById(\'copytext1\').innerText)">Copy to clipboard<\/a>');
+</script>
+</div>
+</div>
+<div class="codeSnippetContainerCode" dir="ltr" id="copytext1">
+<pre>
+<span>Set oAutoIt = WScript.CreateObject("AutoItX3.Control")
+
+' Find all instances of the notepad window
+val = oAutoIt.WinList("[CLASS:Notepad]")
+For i = 1 to val(0,0)
+&nbsp;&nbsp;WScript.Echo "Title:" &amp; val(0,i) &amp; " - Handle:" &amp; val(1,i)
+Next
+
+' Find all windows (may be hundreds!)
+val = oAutoIt.WinList("[ALL]")
+For i = 1 to val(0,0)
+&nbsp;&nbsp;If i &lt; 10 Then
+&nbsp;&nbsp;&nbsp;&nbsp;WScript.Echo "Title:" &amp; val(0,i) &amp; " - Handle:" &amp; val(1,i)
+&nbsp;&nbsp;End If
+Next
+</span><br />
+</pre>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>Method ControlClick</title>
+<meta charset="utf-8">
+<link href="../../css/default.css" rel="stylesheet">
+</head>
+
+<body>
+<h1 class="small">Method Reference</h1>
+<hr style="height:0px">
+<h1>ControlClick</h1>
+<p class="funcdesc">Sends a mouse click command to a given control<br /></p>
+<p class="codeheader">
+ControlClick "title", "text", "controlID" [, button [, clicks [, x [, y ]]]]<br />
+</p>
+
+<h2>Parameters</h2>
+<table>
+<tr>
+<td style="width:15%">title</td>
+<td style="width:85%">The title of the window to access.</td>
+</tr>
+<tr>
+<td>text</td>
+<td>The text of the window to access.</td>
+</tr>
+<tr>
+<td>controlID</td>
+<td>The control to interact with. See <a href="../../intro/controls.htm">Controls</a>.</td>
+</tr>
+<tr>
+<td>button</td>
+<td><strong>Optional:</strong> The button to click, "left", "right" or "middle". Default is the left button.</td>
+</tr>
+<tr>
+<td>clicks</td>
+<td><strong>Optional:</strong> The number of times to click the mouse. Default is 1.</td>
+</tr>
+<tr>
+<td>x</td>
+<td><strong>Optional:</strong> The x position to click within the control. Default is center.</td>
+</tr>
+<tr>
+<td>y</td>
+<td><strong>Optional:</strong> The y position to click within the control. Default is center.</td>
+</tr>
+</table>
+
+<h2>Return Value</h2>
+<table class="noborder">
+<tr>
+<td style="width:10%" class="valign-top">Success:</td>
+<td style="width:90%">Returns 1.</td>
+</tr>
+<tr>
+<td class="valign-top">Failure:</td>
+<td>Returns 0.</td>
+</tr>
+</table>
+
+<h2>Remarks</h2>
+<p>Some controls will resist clicking unless they are the active window. Use the WinActive() function to force the control's window to the top before using ControlClick().<br />
+Using 2 for the number of clicks will send a double-click message to the control - this can even be used to launch programs from an explorer control!<br />
+</p>
+
+<h2>Related</h2>
+<p><a href="ControlCommand.htm">ControlCommand</a>, <a href="MouseClick.htm">MouseClick</a>, <a href="WinActivate.htm">WinActivate</a></p>
+
+<h2 class="bottom">Example</h2>
+<script type="text/javascript">
+if ((navigator.appName == "Microsoft Internet Explorer") && (parseInt(navigator.appVersion) >= 4)) // IE (4+) only
+function copyToClipboard(section) {
+if (window.clipboardData && clipboardData.setData) {
+clipboardData.setData("text", section + "\r\n");
+alert("Copied to clipboard");
+}
+}
+</script>
+<div class="codeSnippetContainer">
+<br />
+<div class="codeSnippetContainerCodeContainer">
+<div class="codeSnippetToolBar">
+<div class="codeSnippetToolBarText">
+<script type="text/javascript">
+if ((navigator.appName == "Microsoft Internet Explorer") && (parseInt(navigator.appVersion) >= 4)) // IE (4+) only
+document.write('<a href="#" id="copy" onclick="copyToClipboard(document.getElementById(\'copytext1\').innerText)">Copy to clipboard<\/a>');
+</script>
+</div>
+</div>
+<div class="codeSnippetContainerCode" dir="ltr" id="copytext1">
+<pre>
+<span>Set oAutoIt = WScript.CreateObject("AutoItX3.Control")
+oAutoIt.ControlClick "Untitled -", "", "MDIClient1"
+</span><br />
+</pre>
+</div>
+</div>
+</div>
+</body>
+</html>

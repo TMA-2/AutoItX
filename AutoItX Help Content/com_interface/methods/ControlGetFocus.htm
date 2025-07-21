@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>Method ControlGetFocus</title>
+<meta charset="utf-8">
+<link href="../../css/default.css" rel="stylesheet">
+</head>
+
+<body>
+<h1 class="small">Method Reference</h1>
+<hr style="height:0px">
+<h1>ControlGetFocus</h1>
+<p class="funcdesc">Returns the ControlRef# of the control that has keyboard focus within a specified window<br /></p>
+<p class="codeheader">
+ControlGetFocus "title" [, "text"]<br />
+</p>
+
+<h2>Parameters</h2>
+<table>
+<tr>
+<td style="width:15%">title</td>
+<td style="width:85%">Title of window to check.</td>
+</tr>
+<tr>
+<td>text</td>
+<td><strong>Optional:</strong> Text from window to check.</td>
+</tr>
+</table>
+
+<h2>Return Value</h2>
+<table class="noborder">
+<tr>
+<td style="width:10%" class="valign-top">Success:</td>
+<td style="width:90%">Returns ControlRef# of the control that has keyboard focus within a specified window.</td>
+</tr>
+<tr>
+<td class="valign-top">Failure:</td>
+<td>Returns a blank string and sets oAutoIt.error to 1 if window is not found.</td>
+</tr>
+</table>
+
+<h2>Related</h2>
+<p><a href="ControlCommand.htm">ControlCommand</a>, <a href="ControlFocus.htm">ControlFocus</a>, <a href="WinActive.htm">WinActive</a></p>
+
+<h2 class="bottom">Example</h2>
+<script type="text/javascript">
+if ((navigator.appName == "Microsoft Internet Explorer") && (parseInt(navigator.appVersion) >= 4)) // IE (4+) only
+function copyToClipboard(section) {
+if (window.clipboardData && clipboardData.setData) {
+clipboardData.setData("text", section + "\r\n");
+alert("Copied to clipboard");
+}
+}
+</script>
+<div class="codeSnippetContainer">
+<br />
+<div class="codeSnippetContainerCodeContainer">
+<div class="codeSnippetToolBar">
+<div class="codeSnippetToolBarText">
+<script type="text/javascript">
+if ((navigator.appName == "Microsoft Internet Explorer") && (parseInt(navigator.appVersion) >= 4)) // IE (4+) only
+document.write('<a href="#" id="copy" onclick="copyToClipboard(document.getElementById(\'copytext1\').innerText)">Copy to clipboard<\/a>');
+</script>
+</div>
+</div>
+<div class="codeSnippetContainerCode" dir="ltr" id="copytext1">
+<pre>
+<span>Set oAutoIt = WScript.CreateObject("AutoItX3.Control")
+a = oAutoIt.ControlGetFocus("Untitled - Notepad")
+</span><br />
+</pre>
+</div>
+</div>
+</div>
+</body>
+</html>

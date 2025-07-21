@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>Method PixelChecksum</title>
+<meta charset="utf-8">
+<link href="../../css/default.css" rel="stylesheet">
+</head>
+
+<body>
+<h1 class="small">Method Reference</h1>
+<hr style="height:0px">
+<h1>PixelChecksum</h1>
+<p class="funcdesc">Generates a checksum for a region of pixels<br /></p>
+<p class="codeheader">
+PixelChecksum left, top, right, bottom [, step]<br />
+</p>
+
+<h2>Parameters</h2>
+<table>
+<tr>
+<td style="width:15%">left</td>
+<td style="width:85%">left coordinate of rectangle.</td>
+</tr>
+<tr>
+<td>top</td>
+<td>top coordinate of rectangle.</td>
+</tr>
+<tr>
+<td>right</td>
+<td>right coordinate of rectangle.</td>
+</tr>
+<tr>
+<td>bottom</td>
+<td>bottom coordinate of rectangle.</td>
+</tr>
+<tr>
+<td>step</td>
+<td><strong>Optional:</strong> Instead of checksumming each pixel use a value larger than 1 to skip pixels (for speed). E.g. A value of 2 will only check every other pixel. Default is 1.</td>
+</tr>
+</table>
+
+<h2>Return Value</h2>
+Returns&nbsp;the checksum value of the region.<br />
+
+
+<h2>Remarks</h2>
+<p>Performing a checksum of a region is very time consuming, so use the smallest region you are able to reduce CPU load. On some machines a checksum of the whole screen could take many seconds!<br />
+<br />
+A checksum only allows you to see if "something" has changed in a region - it does not tell you exactly what has changed.<br />
+<br />
+When using a step value greater than 1 you must bear in mind that the checksumming becomes less reliable for small changes as not every pixel is checked.<br />
+</p>
+
+<h2>Related</h2>
+<p><a href="PixelChecksum.htm">PixelChecksum</a>, <a href="AutoItSetOption.htm#PixelCoordMode ">PixelCoordMode (Option)</a>, <a href="PixelGetColor.htm">PixelGetColor</a>, <a href="PixelSearch.htm">PixelSearch</a></p>
+
+<h2 class="bottom">Example</h2>
+<script type="text/javascript">
+if ((navigator.appName == "Microsoft Internet Explorer") && (parseInt(navigator.appVersion) >= 4)) // IE (4+) only
+function copyToClipboard(section) {
+if (window.clipboardData && clipboardData.setData) {
+clipboardData.setData("text", section + "\r\n");
+alert("Copied to clipboard");
+}
+}
+</script>
+<div class="codeSnippetContainer">
+<br />
+<div class="codeSnippetContainerCodeContainer">
+<div class="codeSnippetToolBar">
+<div class="codeSnippetToolBarText">
+<script type="text/javascript">
+if ((navigator.appName == "Microsoft Internet Explorer") && (parseInt(navigator.appVersion) >= 4)) // IE (4+) only
+document.write('<a href="#" id="copy" onclick="copyToClipboard(document.getElementById(\'copytext1\').innerText)">Copy to clipboard<\/a>');
+</script>
+</div>
+</div>
+<div class="codeSnippetContainerCode" dir="ltr" id="copytext1">
+<pre>
+<span>Set oAutoIt = WScript.CreateObject("AutoItX3.Control")
+
+' Get initial checksum
+checksum = oAutoIt.PixelChecksum(0,0, 50,50)
+</span><br />
+</pre>
+</div>
+</div>
+</div>
+</body>
+</html>

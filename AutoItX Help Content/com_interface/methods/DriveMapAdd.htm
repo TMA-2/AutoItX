@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>Method DriveMapAdd</title>
+<meta charset="utf-8">
+<link href="../../css/default.css" rel="stylesheet">
+</head>
+
+<body>
+<h1 class="small">Method Reference</h1>
+<hr style="height:0px">
+<h1>DriveMapAdd</h1>
+<p class="funcdesc">Maps a network drive<br /></p>
+<p class="codeheader">
+DriveMapAdd "device", "remote share" [, flags [, "user" [, "password"]]]<br />
+</p>
+
+<h2>Parameters</h2>
+<table>
+<tr>
+<td style="width:15%">device</td>
+<td style="width:85%">The device to map, for example "O:" or "LPT1:". If you pass a blank string for this parameter a connection is made but not mapped to a specific drive. If you specify "*" an unused drive letter will be automatically selected.</td>
+</tr>
+<tr>
+<td>remote share</td>
+<td>The remote share to connect to in the form "\\server\share".</td>
+</tr>
+<tr>
+<td>flags</td>
+<td><strong>Optional:</strong><br />
+A combination of the following:<br />
+0 = default<br />
+1 = Persistant mapping<br />
+8 = Show authentication dialog if required</td>
+</tr>
+<tr>
+<td>user</td>
+<td><strong>Optional:</strong> The username to use to connect. In the form "username" or "domain\username".</td>
+</tr>
+<tr>
+<td>password</td>
+<td><strong>Optional:</strong> The password to use to connect.</td>
+</tr>
+</table>
+
+<h2>Return Value</h2>
+<table class="noborder">
+<tr>
+<td style="width:10%" class="valign-top">Success:</td>
+<td style="width:90%">Returns 1. (See Remarks)</td>
+</tr>
+<tr>
+<td class="valign-top">Failure:</td>
+<td>Returns 0 if a new mapping could not be created and sets oAutoIt.error (see below). (See Remarks)</td>
+</tr>
+</table>
+
+<h2>Remarks</h2>
+<p>When the function fails (returns 0) oAutoIt.error contains extended information:<br />
+&nbsp;&nbsp;&nbsp; 1 = Undefined / Other error<br />
+&nbsp;&nbsp;&nbsp; 2 = Access to the remote share was denied<br />
+&nbsp;&nbsp;&nbsp; 3 = The device is already assigned<br />
+&nbsp;&nbsp;&nbsp; 4 = Invalid device name<br />
+&nbsp;&nbsp;&nbsp; 5 = Invalid remote share<br />
+&nbsp;&nbsp;&nbsp; 6 = Invalid password<br />
+<br />
+Note: When using "*" for the device parameter the drive letter selected will be returned instead of 1 or 0, e.g. "U:". If there was an error using "*" then a blank string "" will be returned.<br />
+</p>
+
+<h2>Related</h2>
+<p><a href="DriveMapDel.htm">DriveMapDel</a>, <a href="DriveMapGet.htm">DriveMapGet</a></p>
+
+<h2 class="bottom">Example</h2>
+<script type="text/javascript">
+if ((navigator.appName == "Microsoft Internet Explorer") && (parseInt(navigator.appVersion) >= 4)) // IE (4+) only
+function copyToClipboard(section) {
+if (window.clipboardData && clipboardData.setData) {
+clipboardData.setData("text", section + "\r\n");
+alert("Copied to clipboard");
+}
+}
+</script>
+<div class="codeSnippetContainer">
+<br />
+<div class="codeSnippetContainerCodeContainer">
+<div class="codeSnippetToolBar">
+<div class="codeSnippetToolBarText">
+<script type="text/javascript">
+if ((navigator.appName == "Microsoft Internet Explorer") && (parseInt(navigator.appVersion) >= 4)) // IE (4+) only
+document.write('<a href="#" id="copy" onclick="copyToClipboard(document.getElementById(\'copytext1\').innerText)">Copy to clipboard<\/a>');
+</script>
+</div>
+</div>
+<div class="codeSnippetContainerCode" dir="ltr" id="copytext1">
+<pre>
+<span>Set oAutoIt = WScript.CreateObject("AutoItX3.Control")
+
+' Map X drive to \\myserver\stuff using current user
+oAutoIt.DriveMapAdd "X:", "\\myserver\stuff"
+
+' Map X drive to \\myserver2\stuff2 using the user "jon" from "domainx" with password "tickle"
+oAutoIt.Drivemap "X:", "\\myserver2\stuff2", 0, "domainx\jon", "tickle"
+</span><br />
+</pre>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>Method WinGetProcess</title>
+<meta charset="utf-8">
+<link href="../../css/default.css" rel="stylesheet">
+</head>
+
+<body>
+<h1 class="small">Method Reference</h1>
+<hr style="height:0px">
+<h1>WinGetProcess</h1>
+<p class="funcdesc">Retrieves the Process ID (PID) associated with a window<br /></p>
+<p class="codeheader">
+WinGetProcess "title" [, "text"]<br />
+</p>
+
+<h2>Parameters</h2>
+<table>
+<tr>
+<td style="width:15%">title</td>
+<td style="width:85%">The title of the window to read.</td>
+</tr>
+<tr>
+<td>text</td>
+<td><strong>Optional:</strong> The text of the window to read.</td>
+</tr>
+</table>
+
+<h2>Return Value</h2>
+<table class="noborder">
+<tr>
+<td style="width:10%" class="valign-top">Success:</td>
+<td style="width:90%">Returns a string containing the numeric Process ID (PID).</td>
+</tr>
+<tr>
+<td class="valign-top">Failure:</td>
+<td>Returns "".</td>
+</tr>
+</table>
+
+<h2>Related</h2>
+<p><a href="ProcessWait.htm">ProcessWait</a>, <a href="ProcessWaitClose.htm">ProcessWaitClose</a></p>
+
+<h2 class="bottom">Example</h2>
+<script type="text/javascript">
+if ((navigator.appName == "Microsoft Internet Explorer") && (parseInt(navigator.appVersion) >= 4)) // IE (4+) only
+function copyToClipboard(section) {
+if (window.clipboardData && clipboardData.setData) {
+clipboardData.setData("text", section + "\r\n");
+alert("Copied to clipboard");
+}
+}
+</script>
+<div class="codeSnippetContainer">
+<br />
+<div class="codeSnippetContainerCodeContainer">
+<div class="codeSnippetToolBar">
+<div class="codeSnippetToolBarText">
+<script type="text/javascript">
+if ((navigator.appName == "Microsoft Internet Explorer") && (parseInt(navigator.appVersion) >= 4)) // IE (4+) only
+document.write('<a href="#" id="copy" onclick="copyToClipboard(document.getElementById(\'copytext1\').innerText)">Copy to clipboard<\/a>');
+</script>
+</div>
+</div>
+<div class="codeSnippetContainerCode" dir="ltr" id="copytext1">
+<pre>
+<span>Set oAutoIt = WScript.CreateObject("AutoItX3.Control")
+WScript.Echo oAutoIt.WinGetProcess("Untitled - Notepad")
+</span><br />
+</pre>
+</div>
+</div>
+</div>
+</body>
+</html>

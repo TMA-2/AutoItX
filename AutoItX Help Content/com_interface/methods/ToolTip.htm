@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>Method ToolTip</title>
+<meta charset="utf-8">
+<link href="../../css/default.css" rel="stylesheet">
+</head>
+
+<body>
+<h1 class="small">Method Reference</h1>
+<hr style="height:0px">
+<h1>ToolTip</h1>
+<p class="funcdesc">Creates a tooltip anywhere on the screen<br /></p>
+<p class="codeheader">
+ToolTip "text" [, x, y]<br />
+</p>
+
+<h2>Parameters</h2>
+<table>
+<tr>
+<td style="width:15%">text</td>
+<td style="width:85%">The text of the tooltip. (An empty string clears a displaying tooltip)</td>
+</tr>
+<tr>
+<td>x, y</td>
+<td>The x,y position of the tooltip.</td>
+</tr>
+</table>
+
+<h2>Return Value</h2>
+None.<br />
+
+
+<h2>Remarks</h2>
+<p>If the x and y coordinates are omitted the, tip is placed near the mouse cursor. If the coords would cause the tooltip to run off screen, it is repositioned to visible.<br />
+Tooltip appears until it is cleared, until script terminates, or sometimes until it is clicked upon. You may use a linefeed character to create multi-line tooltips.<br />
+</p>
+
+<h2 class="bottom">Example</h2>
+<script type="text/javascript">
+if ((navigator.appName == "Microsoft Internet Explorer") && (parseInt(navigator.appVersion) >= 4)) // IE (4+) only
+function copyToClipboard(section) {
+if (window.clipboardData && clipboardData.setData) {
+clipboardData.setData("text", section + "\r\n");
+alert("Copied to clipboard");
+}
+}
+</script>
+<div class="codeSnippetContainer">
+<br />
+<div class="codeSnippetContainerCodeContainer">
+<div class="codeSnippetToolBar">
+<div class="codeSnippetToolBarText">
+<script type="text/javascript">
+if ((navigator.appName == "Microsoft Internet Explorer") && (parseInt(navigator.appVersion) >= 4)) // IE (4+) only
+document.write('<a href="#" id="copy" onclick="copyToClipboard(document.getElementById(\'copytext1\').innerText)">Copy to clipboard<\/a>');
+</script>
+</div>
+</div>
+<div class="codeSnippetContainerCode" dir="ltr" id="copytext1">
+<pre>
+<span>Set oAutoIt = WScript.CreateObject("AutoItX3.Control")
+
+' This will create a tooltip in the upper left of the screen
+oAutoIt.ToolTip "This is a tooltip", 0, 0
+oAutoIt.Sleep 2000 &nbsp; &nbsp; &nbsp;' Sleep to give tooltip time to display
+</span><br />
+</pre>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>Method WinWaitActive</title>
+<meta charset="utf-8">
+<link href="../../css/default.css" rel="stylesheet">
+</head>
+
+<body>
+<h1 class="small">Method Reference</h1>
+<hr style="height:0px">
+<h1>WinWaitActive</h1>
+<p class="funcdesc">Pauses execution of the script until the requested window is active<br /></p>
+<p class="codeheader">
+WinWaitActive "title", ["text"], [timeout]<br />
+</p>
+
+<h2>Parameters</h2>
+<table>
+<tr>
+<td style="width:15%">title</td>
+<td style="width:85%">The title of the window to check.</td>
+</tr>
+<tr>
+<td>text</td>
+<td><strong>Optional:</strong> The text of the window to check.</td>
+</tr>
+<tr>
+<td>timeout</td>
+<td><strong>Optional:</strong> Timeout in seconds</td>
+</tr>
+</table>
+
+<h2>Return Value</h2>
+<table class="noborder">
+<tr>
+<td style="width:10%" class="valign-top">Success:</td>
+<td style="width:90%">Returns 1.</td>
+</tr>
+<tr>
+<td class="valign-top">Failure:</td>
+<td>Returns 0 if timeout occurred.</td>
+</tr>
+</table>
+
+<h2>Remarks</h2>
+<p>AutoIt polls for a window match every 250 milliseconds or so.<br />
+</p>
+
+<h2>Related</h2>
+<p><a href="WinActive.htm">WinActive</a>, <a href="WinExists.htm">WinExists</a>, <a href="WinWait.htm">WinWait</a>, <a href="WinWaitClose.htm">WinWaitClose</a>, <a href="AutoItSetOption.htm#WinWaitDelay ">WinWaitDelay (Option)</a>, <a href="WinWaitNotActive.htm">WinWaitNotActive</a></p>
+
+<h2 class="bottom">Example</h2>
+<script type="text/javascript">
+if ((navigator.appName == "Microsoft Internet Explorer") && (parseInt(navigator.appVersion) >= 4)) // IE (4+) only
+function copyToClipboard(section) {
+if (window.clipboardData && clipboardData.setData) {
+clipboardData.setData("text", section + "\r\n");
+alert("Copied to clipboard");
+}
+}
+</script>
+<div class="codeSnippetContainer">
+<br />
+<div class="codeSnippetContainerCodeContainer">
+<div class="codeSnippetToolBar">
+<div class="codeSnippetToolBarText">
+<script type="text/javascript">
+if ((navigator.appName == "Microsoft Internet Explorer") && (parseInt(navigator.appVersion) >= 4)) // IE (4+) only
+document.write('<a href="#" id="copy" onclick="copyToClipboard(document.getElementById(\'copytext1\').innerText)">Copy to clipboard<\/a>');
+</script>
+</div>
+</div>
+<div class="codeSnippetContainerCode" dir="ltr" id="copytext1">
+<pre>
+<span>Set oAutoIt = WScript.CreateObject("AutoItX3.Control")
+
+'Wait for the window "Untitled" to exist and be active
+oAutoIt.WinWaitActive "Untitled"
+
+'Wait a maximum of 5 seconds for "Untitled" to exist and be active
+oAutoIt.WinWaitActive "Untitled", "", 5
+</span><br />
+</pre>
+</div>
+</div>
+</div>
+</body>
+</html>

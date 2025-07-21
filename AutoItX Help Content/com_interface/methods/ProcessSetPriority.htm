@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>Method ProcessSetPriority</title>
+<meta charset="utf-8">
+<link href="../../css/default.css" rel="stylesheet">
+</head>
+
+<body>
+<h1 class="small">Method Reference</h1>
+<hr style="height:0px">
+<h1>ProcessSetPriority</h1>
+<p class="funcdesc">Changes the priority of a process<br /></p>
+<p class="codeheader">
+ProcessSetPriority "process", priority<br />
+</p>
+
+<h2>Parameters</h2>
+<table>
+<tr>
+<td style="width:15%">process</td>
+<td style="width:85%">The name or PID of the process to check.</td>
+</tr>
+<tr>
+<td>priority</td>
+<td>A flag which determines what priority to set<br />
+0 - Idle/Low<br />
+1 - Below Normal (Not supported on Windows 95/98/ME)<br />
+2 - Normal<br />
+3 - Above Normal (Not supported on Windows 95/98/ME)<br />
+4 - High<br />
+5 - Realtime (Use with caution, may make the system unstable)</td>
+</tr>
+</table>
+
+<h2>Return Value</h2>
+Success:&nbsp;Returns 1.<br />
+Failure:&nbsp;Returns 0 and sets oAutoIt.error to 1. May set oAutoIt.error to 2 if attempting to use an unsupported priority class.<br />
+
+
+<h2>Remarks</h2>
+<p>Above Normal and Below Normal priority classes are not supported on Windows 95/98/ME. If you try to use them on those platforms, the function will fail and oAutoIt.error will be set to 2.<br />
+</p>
+
+<h2 class="bottom">Example</h2>
+<script type="text/javascript">
+if ((navigator.appName == "Microsoft Internet Explorer") && (parseInt(navigator.appVersion) >= 4)) // IE (4+) only
+function copyToClipboard(section) {
+if (window.clipboardData && clipboardData.setData) {
+clipboardData.setData("text", section + "\r\n");
+alert("Copied to clipboard");
+}
+}
+</script>
+<div class="codeSnippetContainer">
+<br />
+<div class="codeSnippetContainerCodeContainer">
+<div class="codeSnippetToolBar">
+<div class="codeSnippetToolBarText">
+<script type="text/javascript">
+if ((navigator.appName == "Microsoft Internet Explorer") && (parseInt(navigator.appVersion) >= 4)) // IE (4+) only
+document.write('<a href="#" id="copy" onclick="copyToClipboard(document.getElementById(\'copytext1\').innerText)">Copy to clipboard<\/a>');
+</script>
+</div>
+</div>
+<div class="codeSnippetContainerCode" dir="ltr" id="copytext1">
+<pre>
+<span>Set oAutoIt = WScript.CreateObject("AutoItX3.Control")
+oAutoIt.Run "Notepad.exe"
+oAutoIt.ProcessSetPriority "notepad.exe", 0
+' Notepad should now have Idle/Low priority
+</span><br />
+</pre>
+</div>
+</div>
+</div>
+</body>
+</html>

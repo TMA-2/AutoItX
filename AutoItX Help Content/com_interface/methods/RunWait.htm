@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>Method RunWait</title>
+<meta charset="utf-8">
+<link href="../../css/default.css" rel="stylesheet">
+</head>
+
+<body>
+<h1 class="small">Method Reference</h1>
+<hr style="height:0px">
+<h1>RunWait</h1>
+<p class="funcdesc">Runs an external program and pauses script execution until the program finishes<br /></p>
+<p class="codeheader">
+RunWait "filename" [, "workingdir" [, flag]]<br />
+</p>
+
+<h2>Parameters</h2>
+<table>
+<tr>
+<td style="width:15%">filename</td>
+<td style="width:85%">The name of the executable (EXE, BAT, COM, PIF) to run.</td>
+</tr>
+<tr>
+<td>workingdir</td>
+<td><strong>Optional:</strong> The working directory.</td>
+</tr>
+<tr>
+<td>flag</td>
+<td><strong>Optional:</strong> The "show" flag of the executed program:<br />
+SW_HIDE = Hidden window<br />
+SW_MINIMIZE = Minimized window<br />
+SW_MAXIMIZE = Maximized window<br />
+SW_SHOW = Show window<br />
+SW_SHOWNORMAL = Show window (default)</td>
+</tr>
+</table>
+
+<h2>Return Value</h2>
+<table class="noborder">
+<tr>
+<td style="width:10%" class="valign-top">Success:</td>
+<td style="width:90%">Returns the exit code of the program that was run.</td>
+</tr>
+<tr>
+<td class="valign-top">Failure:</td>
+<td>see Remarks.</td>
+</tr>
+</table>
+
+<h2>Remarks</h2>
+<p>After running the requested program the script pauses until the program terminates. To run a program and then immediately continue script execution use the Run function instead.<br />
+<br />
+Some programs will appear to return immediately even though they are still running; these programs spawn another process - you may be able to use the ProcessWaitClose function to handle these cases.<br />
+<br />
+The <strong>error</strong> property is set to 1 as an indication of failure.<br />
+</p>
+
+<h2>Related</h2>
+<p><a href="ProcessWait.htm">ProcessWait</a>, <a href="ProcessWaitClose.htm">ProcessWaitClose</a>, <a href="RunAs.htm">RunAs</a>, <a href="RunAsWait.htm">RunAsWait</a>, <a href="RunWait.htm">RunWait</a></p>
+
+<h2 class="bottom">Example</h2>
+<script type="text/javascript">
+if ((navigator.appName == "Microsoft Internet Explorer") && (parseInt(navigator.appVersion) >= 4)) // IE (4+) only
+function copyToClipboard(section) {
+if (window.clipboardData && clipboardData.setData) {
+clipboardData.setData("text", section + "\r\n");
+alert("Copied to clipboard");
+}
+}
+</script>
+<div class="codeSnippetContainer">
+<br />
+<div class="codeSnippetContainerCodeContainer">
+<div class="codeSnippetToolBar">
+<div class="codeSnippetToolBarText">
+<script type="text/javascript">
+if ((navigator.appName == "Microsoft Internet Explorer") && (parseInt(navigator.appVersion) >= 4)) // IE (4+) only
+document.write('<a href="#" id="copy" onclick="copyToClipboard(document.getElementById(\'copytext1\').innerText)">Copy to clipboard<\/a>');
+</script>
+</div>
+</div>
+<div class="codeSnippetContainerCode" dir="ltr" id="copytext1">
+<pre>
+<span>Set oAutoIt = WScript.CreateObject("AutoItX3.Control")
+val = oAutoIt.RunWait("Notepad.exe", "C:\WINDOWS", oAutoIt.SW_SHOWNORMAL)
+
+' script waits until Notepad closes
+WScript.Echo "Program returned with exit code:" &amp; val
+</span><br />
+</pre>
+</div>
+</div>
+</div>
+</body>
+</html>

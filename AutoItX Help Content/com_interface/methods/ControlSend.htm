@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>Method ControlSend</title>
+<meta charset="utf-8">
+<link href="../../css/default.css" rel="stylesheet">
+</head>
+
+<body>
+<h1 class="small">Method Reference</h1>
+<hr style="height:0px">
+<h1>ControlSend</h1>
+<p class="funcdesc">Sends a string of characters to a control<br /></p>
+<p class="codeheader">
+ControlSend "title", "text", "controlID", "string" [, flag]<br />
+</p>
+
+<h2>Parameters</h2>
+<table>
+<tr>
+<td style="width:15%">title</td>
+<td style="width:85%">The title of the window to access.</td>
+</tr>
+<tr>
+<td>text</td>
+<td>The text of the window to access.</td>
+</tr>
+<tr>
+<td>controlID</td>
+<td>The control to interact with. See <a href="../../intro/controls.htm">Controls</a>.</td>
+</tr>
+<tr>
+<td>string</td>
+<td>String of characters to send to the control.</td>
+</tr>
+<tr>
+<td>flag</td>
+<td><strong>Optional:</strong> Changes how "keys" is processed:<br />
+flag = 0 (default), Text contains special characters like + to indicate SHIFT and {LEFT} to indicate left arrow.<br />
+flag = 1, keys are sent raw.</td>
+</tr>
+</table>
+
+<h2>Return Value</h2>
+<table class="noborder">
+<tr>
+<td style="width:10%" class="valign-top">Success:</td>
+<td style="width:90%">Returns 1.</td>
+</tr>
+<tr>
+<td class="valign-top">Failure:</td>
+<td>Returns 0 if window/control is not found.</td>
+</tr>
+</table>
+
+<h2>Remarks</h2>
+<p>ControlSend can be quite useful to send capital letters without messing up the state of "Shift."<br />
+<br />
+When using a control name in the Control functions, you need to add a number to the end of the name to indicate which control. For example, if there two controls listed called "MDIClient", you would refer to these as "MDIClient1" and "MDIClient2".<br />
+Note, this function cannot send all the characters that the usual Send function can (notably ALT keys) but it can send most of them--even to non-active or hidden windows!<br />
+</p>
+
+<h2>Related</h2>
+<p><a href="ControlCommand.htm">ControlCommand</a>, <a href="Send.htm">Send</a></p>
+
+<h2 class="bottom">Example</h2>
+<script type="text/javascript">
+if ((navigator.appName == "Microsoft Internet Explorer") && (parseInt(navigator.appVersion) >= 4)) // IE (4+) only
+function copyToClipboard(section) {
+if (window.clipboardData && clipboardData.setData) {
+clipboardData.setData("text", section + "\r\n");
+alert("Copied to clipboard");
+}
+}
+</script>
+<div class="codeSnippetContainer">
+<br />
+<div class="codeSnippetContainerCodeContainer">
+<div class="codeSnippetToolBar">
+<div class="codeSnippetToolBarText">
+<script type="text/javascript">
+if ((navigator.appName == "Microsoft Internet Explorer") && (parseInt(navigator.appVersion) >= 4)) // IE (4+) only
+document.write('<a href="#" id="copy" onclick="copyToClipboard(document.getElementById(\'copytext1\').innerText)">Copy to clipboard<\/a>');
+</script>
+</div>
+</div>
+<div class="codeSnippetContainerCode" dir="ltr" id="copytext1">
+<pre>
+<span>Set oAutoIt = WScript.CreateObject("AutoItX3.Control")
+oAutoIt.ControlSend "Untitled", "", "Edit1", "This is a line of text in the notepad window"
+</span><br />
+</pre>
+</div>
+</div>
+</div>
+</body>
+</html>

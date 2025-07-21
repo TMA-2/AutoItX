@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Script Breaking Changes in Recent Versions</title>
+  <meta charset="utf-8">
+  <link href="css/default.css" rel="stylesheet">
+  <style type="text/css">
+li.c1 {list-style: none; display: inline}
+  </style>
+</head>
+<body>
+  <h1>Script Breaking Changes in Recent Versions</h1>
+  <p>This page contains a list of all changes made in recent updates that will almost certainly <strong>break existing scripts/sources</strong>. Please read this list carefully when upgrading if you have not been keeping up with developments in the beta
+  versions. If any of these issues affect you then <strong>you will need to modify your scripts/sources</strong>.</p>
+  <h2>23rd December, 2013 - v3.3.10.0</h2>
+  <p><strong>AutoItX:</strong></p>
+  <ul>
+    <li>Removed: Removed DevC files and Visual Studio 6 files.</li>
+    <li>Removed: ANSI versions of Send/WinWait functions from the native DLL.</li>
+    <li>Removed: DLL Imports: AU3_WinGetPosX, AU3_WinGetPosY, AU3_WinGetPosWidth, AU3_WinGetPosHeight.</li>
+    <li>Removed: DLL Imports: AU3_ControlGetPosX, AU3_ControlGetPosY, AU3_ControlGetPosWidth, AU3_ControlGetPosHeight.</li>
+    <li>Removed: DLL Imports: AU3_MousePosX, AU3_MouseGetPosY.</li>
+    <li>Removed: DLL Imports: AU3_WinGetClientSizeWidth, AU3_WinGetClientSizeHeight.</li>
+    <li>Removed: DLL Imports: AU3_WinGetCaretPosX, AU3_WinGetCaretPosY.</li>
+    <li>Removed: DLL Imports: AU3_CDTray, AU3_BlockInput.</li>
+    <li>Removed: DLL Imports: AU3_RunAsSet.</li>
+    <li>Removed: COM Methods: CDTray, BlockInput.</li>
+    <li>Removed: COM Methods: RunAsSet.</li>
+    <li>Removed: All registry functions. The support was limited and the host language will certainly have registry functions.</li>
+    <li>Removed: All Ini file functions. As per registry functions.</li>
+<br />
+    <li>Changed: Renamed AutoIt3.h to AutoItX3_DLL.h.</li>
+  </ul>
+  <h2>18th December, 2009 - v3.3.2.0</h2>
+  <p><strong>AutoItX:</strong></p>
+  <ul>
+    <li>Removed: "ColorMode" option removed from AutoItSetOption().</li>
+  </ul>
+  <h2>24th December, 2008 - v3.3.0.0</h2>
+  <p><strong>AutoItX:</strong></p>
+  <ul>
+    <li>The native version of the DLL now exclusively uses Unicode strings (LPWSTR and LPCWTSR). If you really need ANSI strings then continue to use v3.2.12.1. The easiest workaround though is to use a "wrapper" function to simply convert between
+    Unicode and ANSI. A limited selection of functions (WinWait... and Send) have an ANSI version but it is not intended to add ANSI versions for any others unless there is a large demand.</li>
+  </ul>
+</body>
+</html>

@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>Method WinMinimizeAllUndo</title>
+<meta charset="utf-8">
+<link href="../../css/default.css" rel="stylesheet">
+</head>
+
+<body>
+<h1 class="small">Method Reference</h1>
+<hr style="height:0px">
+<h1>WinMinimizeAllUndo</h1>
+<p class="funcdesc">Undoes a previous WinMinimizeAll function<br /></p>
+<p class="codeheader">
+WinMinimizeAllUndo<br />
+</p>
+
+<h2>Return Value</h2>
+None.<br />
+
+
+<h2>Remarks</h2>
+<p>Send("#+m") is a possible alternative.<br />
+</p>
+
+<h2>Related</h2>
+<p><a href="WinMinimizeAll.htm">WinMinimizeAll</a>, <a href="WinSetState.htm">WinSetState</a></p>
+
+<h2 class="bottom">Example</h2>
+<script type="text/javascript">
+if ((navigator.appName == "Microsoft Internet Explorer") && (parseInt(navigator.appVersion) >= 4)) // IE (4+) only
+function copyToClipboard(section) {
+if (window.clipboardData && clipboardData.setData) {
+clipboardData.setData("text", section + "\r\n");
+alert("Copied to clipboard");
+}
+}
+</script>
+<div class="codeSnippetContainer">
+<br />
+<div class="codeSnippetContainerCodeContainer">
+<div class="codeSnippetToolBar">
+<div class="codeSnippetToolBarText">
+<script type="text/javascript">
+if ((navigator.appName == "Microsoft Internet Explorer") && (parseInt(navigator.appVersion) >= 4)) // IE (4+) only
+document.write('<a href="#" id="copy" onclick="copyToClipboard(document.getElementById(\'copytext1\').innerText)">Copy to clipboard<\/a>');
+</script>
+</div>
+</div>
+<div class="codeSnippetContainerCode" dir="ltr" id="copytext1">
+<pre>
+<span>Set oAutoIt = WScript.CreateObject("AutoItX3.Control")
+oAutoIt.WinMinimizeAllUndo
+</span><br />
+</pre>
+</div>
+</div>
+</div>
+</body>
+</html>

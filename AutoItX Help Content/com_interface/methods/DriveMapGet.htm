@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>Method DriveMapGet</title>
+<meta charset="utf-8">
+<link href="../../css/default.css" rel="stylesheet">
+</head>
+
+<body>
+<h1 class="small">Method Reference</h1>
+<hr style="height:0px">
+<h1>DriveMapGet</h1>
+<p class="funcdesc">Retreives the details of a mapped drive<br /></p>
+<p class="codeheader">
+DriveMapGet"device"<br />
+</p>
+
+<h2>Parameters</h2>
+<table>
+<tr>
+<td style="width:15%">device</td>
+<td style="width:85%">The device (drive or printer) letter to query. Eg. "O:" or "LPT1:"</td>
+</tr>
+</table>
+
+<h2>Return Value</h2>
+<table class="noborder">
+<tr>
+<td style="width:10%" class="valign-top">Success:</td>
+<td style="width:90%">Returns details of the mapping, e.g. \\server\share</td>
+</tr>
+<tr>
+<td class="valign-top">Failure:</td>
+<td>Returns a blank string "" and sets oAutoIt.error to 1.</td>
+</tr>
+</table>
+
+<h2>Related</h2>
+<p><a href="DriveMapAdd.htm">DriveMapAdd</a>, <a href="DriveMapDel.htm">DriveMapDel</a></p>
+
+<h2 class="bottom">Example</h2>
+<script type="text/javascript">
+if ((navigator.appName == "Microsoft Internet Explorer") && (parseInt(navigator.appVersion) >= 4)) // IE (4+) only
+function copyToClipboard(section) {
+if (window.clipboardData && clipboardData.setData) {
+clipboardData.setData("text", section + "\r\n");
+alert("Copied to clipboard");
+}
+}
+</script>
+<div class="codeSnippetContainer">
+<br />
+<div class="codeSnippetContainerCodeContainer">
+<div class="codeSnippetToolBar">
+<div class="codeSnippetToolBarText">
+<script type="text/javascript">
+if ((navigator.appName == "Microsoft Internet Explorer") && (parseInt(navigator.appVersion) >= 4)) // IE (4+) only
+document.write('<a href="#" id="copy" onclick="copyToClipboard(document.getElementById(\'copytext1\').innerText)">Copy to clipboard<\/a>');
+</script>
+</div>
+</div>
+<div class="codeSnippetContainerCode" dir="ltr" id="copytext1">
+<pre>
+<span>Set oAutoIt = WScript.CreateObject("AutoItX3.Control")
+
+' Map X drive to \\myserver\stuff using current user
+oAutoIt.DriveMapAdd "X:", "\\myserver\stuff"
+
+' Get details of the mapping
+WScript.Echo "Drive X: is mapped to " &amp; oAutoIt.DriveMapGet("X:")
+</span><br />
+</pre>
+</div>
+</div>
+</div>
+</body>
+</html>

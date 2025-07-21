@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>Method ProcessWait</title>
+<meta charset="utf-8">
+<link href="../../css/default.css" rel="stylesheet">
+</head>
+
+<body>
+<h1 class="small">Method Reference</h1>
+<hr style="height:0px">
+<h1>ProcessWait</h1>
+<p class="funcdesc">Pauses script execution until a given process exists<br /></p>
+<p class="codeheader">
+ProcessWait "process" [, timeout]<br />
+</p>
+
+<h2>Parameters</h2>
+<table>
+<tr>
+<td style="width:15%">process</td>
+<td style="width:85%">The name of the process to check.</td>
+</tr>
+<tr>
+<td>timeout</td>
+<td><strong>Optional:</strong> Specifies how long to wait (default is to wait indefinitely).</td>
+</tr>
+</table>
+
+<h2>Return Value</h2>
+Success:	Returns&nbsp;1.<br />
+Failure:	Returns&nbsp;0 if the wait timed out.<br />
+
+
+<h2>Remarks</h2>
+<p>Process names are executables without the full path, e.g., "notepad.exe" or "winword.exe"<br />
+In order to work under Windows NT 4.0, ProcessWait requires the file PSAPI.DLL (included in the AutoIt installation directory).<br />
+The process is polled approximately every 250 milliseconds.<br />
+<br />
+This function is the only process function not to accept a PID. Because PIDs are allocated randomly, waiting for a particular PID to exist doesn't make sense.<br />
+</p>
+
+<h2>Related</h2>
+<p><a href="ProcessClose.htm">ProcessClose</a>, <a href="ProcessExists.htm">ProcessExists</a>, <a href="ProcessWaitClose.htm">ProcessWaitClose</a>, <a href="RunWait.htm">RunWait</a>, <a href="WinWait.htm">WinWait</a>, <a href="WinWaitActive.htm">WinWaitActive</a></p>
+
+<h2 class="bottom">Example</h2>
+<script type="text/javascript">
+if ((navigator.appName == "Microsoft Internet Explorer") && (parseInt(navigator.appVersion) >= 4)) // IE (4+) only
+function copyToClipboard(section) {
+if (window.clipboardData && clipboardData.setData) {
+clipboardData.setData("text", section + "\r\n");
+alert("Copied to clipboard");
+}
+}
+</script>
+<div class="codeSnippetContainer">
+<br />
+<div class="codeSnippetContainerCodeContainer">
+<div class="codeSnippetToolBar">
+<div class="codeSnippetToolBarText">
+<script type="text/javascript">
+if ((navigator.appName == "Microsoft Internet Explorer") && (parseInt(navigator.appVersion) >= 4)) // IE (4+) only
+document.write('<a href="#" id="copy" onclick="copyToClipboard(document.getElementById(\'copytext1\').innerText)">Copy to clipboard<\/a>');
+</script>
+</div>
+</div>
+<div class="codeSnippetContainerCode" dir="ltr" id="copytext1">
+<pre>
+<span>Set oAutoIt = WScript.CreateObject("AutoItX3.Control")
+oAutoIt.ProcessWait "notepad.exe"
+</span><br />
+</pre>
+</div>
+</div>
+</div>
+</body>
+</html>

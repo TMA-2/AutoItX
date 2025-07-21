@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>Method ControlGetText</title>
+<meta charset="utf-8">
+<link href="../../css/default.css" rel="stylesheet">
+</head>
+
+<body>
+<h1 class="small">Method Reference</h1>
+<hr style="height:0px">
+<h1>ControlGetText</h1>
+<p class="funcdesc">Retrieves text from a control<br /></p>
+<p class="codeheader">
+ControlGetText "title", "text", "controlID"<br />
+</p>
+
+<h2>Parameters</h2>
+<table>
+<tr>
+<td style="width:15%">title</td>
+<td style="width:85%">The title of the window to access.</td>
+</tr>
+<tr>
+<td>text</td>
+<td>The text of the window to access.</td>
+</tr>
+<tr>
+<td>controlID</td>
+<td>The control to interact with. See <a href="../../intro/controls.htm">Controls</a>.</td>
+</tr>
+</table>
+
+<h2>Return Value</h2>
+<table class="noborder">
+<tr>
+<td style="width:10%" class="valign-top">Success:</td>
+<td style="width:90%">Returns text from a control.</td>
+</tr>
+<tr>
+<td class="valign-top">Failure:</td>
+<td>Sets oAutoIt.error to 1 and returns a blank string of "".</td>
+</tr>
+</table>
+
+<h2>Remarks</h2>
+<p>When using a control name in the Control functions, you need to add a number to the end of the name to indicate which control. For example, if there two controls listed called "MDIClient", you would refer to these as "MDIClient1" and "MDIClient2".<br />
+</p>
+
+<h2>Related</h2>
+<p><a href="ControlCommand.htm">ControlCommand</a>, <a href="ControlSetText.htm">ControlSetText</a>, <a href="StatusbarGetText.htm">StatusbarGetText</a>, <a href="WinGetText.htm">WinGetText</a></p>
+
+<h2 class="bottom">Example</h2>
+<script type="text/javascript">
+if ((navigator.appName == "Microsoft Internet Explorer") && (parseInt(navigator.appVersion) >= 4)) // IE (4+) only
+function copyToClipboard(section) {
+if (window.clipboardData && clipboardData.setData) {
+clipboardData.setData("text", section + "\r\n");
+alert("Copied to clipboard");
+}
+}
+</script>
+<div class="codeSnippetContainer">
+<br />
+<div class="codeSnippetContainerCodeContainer">
+<div class="codeSnippetToolBar">
+<div class="codeSnippetToolBarText">
+<script type="text/javascript">
+if ((navigator.appName == "Microsoft Internet Explorer") && (parseInt(navigator.appVersion) >= 4)) // IE (4+) only
+document.write('<a href="#" id="copy" onclick="copyToClipboard(document.getElementById(\'copytext1\').innerText)">Copy to clipboard<\/a>');
+</script>
+</div>
+</div>
+<div class="codeSnippetContainerCode" dir="ltr" id="copytext1">
+<pre>
+<span>Set oAutoIt = WScript.CreateObject("AutoItX3.Control")
+var = oAutoIt.ControlGetText("Untitled - Notepad", "", "Edit1")
+</span><br />
+</pre>
+</div>
+</div>
+</div>
+</body>
+</html>

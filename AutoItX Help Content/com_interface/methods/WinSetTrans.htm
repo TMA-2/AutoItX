@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>Method WinSetTrans</title>
+<meta charset="utf-8">
+<link href="../../css/default.css" rel="stylesheet">
+</head>
+
+<body>
+<h1 class="small">Method Reference</h1>
+<hr style="height:0px">
+<h1>WinSetTrans</h1>
+<p class="funcdesc">Sets the transparency of a window<br /></p>
+<p class="codeheader">
+WinSetTrans "title", "text", transparency<br />
+</p>
+
+<h2>Parameters</h2>
+<table>
+<tr>
+<td style="width:15%">title</td>
+<td style="width:85%">The title of the window to change.</td>
+</tr>
+<tr>
+<td>text</td>
+<td>The text of the window to change.</td>
+</tr>
+<tr>
+<td>transparency</td>
+<td>A number in the range 0 - 255. The larger the number, the more transparent the window will become.</td>
+</tr>
+</table>
+
+<h2>Return Value</h2>
+Non-zero&nbsp;on success, zero on failure. oAutoIt.error will be set to 1 if the function isn't supported on an OS.<br />
+
+
+<h2 class="bottom">Example</h2>
+<script type="text/javascript">
+if ((navigator.appName == "Microsoft Internet Explorer") && (parseInt(navigator.appVersion) >= 4)) // IE (4+) only
+function copyToClipboard(section) {
+if (window.clipboardData && clipboardData.setData) {
+clipboardData.setData("text", section + "\r\n");
+alert("Copied to clipboard");
+}
+}
+</script>
+<div class="codeSnippetContainer">
+<br />
+<div class="codeSnippetContainerCodeContainer">
+<div class="codeSnippetToolBar">
+<div class="codeSnippetToolBarText">
+<script type="text/javascript">
+if ((navigator.appName == "Microsoft Internet Explorer") && (parseInt(navigator.appVersion) >= 4)) // IE (4+) only
+document.write('<a href="#" id="copy" onclick="copyToClipboard(document.getElementById(\'copytext1\').innerText)">Copy to clipboard<\/a>');
+</script>
+</div>
+</div>
+<div class="codeSnippetContainerCode" dir="ltr" id="copytext1">
+<pre>
+<span>Set oAutoIt = WScript.CreateObject("AutoItX3.Control")
+
+oAutoIt.Run "notepad.exe", "", oAutoIt.SW_MINIMIZE
+oAutoIt.WinWaitActive "Untitled - Notepad"
+oAutoIt.WinSetTrans "Untitled - Notepad","", 50
+</span><br />
+</pre>
+</div>
+</div>
+</div>
+</body>
+</html>

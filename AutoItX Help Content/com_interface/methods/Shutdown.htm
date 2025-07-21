@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>Method Shutdown</title>
+<meta charset="utf-8">
+<link href="../../css/default.css" rel="stylesheet">
+</head>
+
+<body>
+<h1 class="small">Method Reference</h1>
+<hr style="height:0px">
+<h1>Shutdown</h1>
+<p class="funcdesc">Shuts down the system<br /></p>
+<p class="codeheader">
+Shutdown ( code )<br />
+</p>
+
+<h2>Parameters</h2>
+<table>
+<tr>
+<td style="width:15%">code</td>
+<td style="width:85%">A combination of shutdown codes. See "remarks".</td>
+</tr>
+</table>
+
+<h2>Return Value</h2>
+<table class="noborder">
+<tr>
+<td style="width:10%" class="valign-top">Success:</td>
+<td style="width:90%">Returns 1.</td>
+</tr>
+<tr>
+<td class="valign-top">Failure:</td>
+<td>Returns 0.</td>
+</tr>
+</table>
+
+<h2>Remarks</h2>
+<p>The shutdown code is a combination of the following values:<br />
+0 = Logoff<br />
+1 = Shutdown<br />
+2 = Reboot<br />
+4 = Force<br />
+8 = Power down<br />
+<br />
+Add the required values together. To shutdown and power down, for example, the code would be 9 (shutdown + power down = 1 + 8 = 9).<br />
+<br />
+Standby or hibernate can be achieved with third-party software such as http://grc.com/wizmo/wizmo.htm<br />
+</p>
+
+<h2>Related</h2>
+<p><a href="ProcessClose.htm">ProcessClose</a></p>
+
+<h2 class="bottom">Example</h2>
+<script type="text/javascript">
+if ((navigator.appName == "Microsoft Internet Explorer") && (parseInt(navigator.appVersion) >= 4)) // IE (4+) only
+function copyToClipboard(section) {
+if (window.clipboardData && clipboardData.setData) {
+clipboardData.setData("text", section + "\r\n");
+alert("Copied to clipboard");
+}
+}
+</script>
+<div class="codeSnippetContainer">
+<br />
+<div class="codeSnippetContainerCodeContainer">
+<div class="codeSnippetToolBar">
+<div class="codeSnippetToolBarText">
+<script type="text/javascript">
+if ((navigator.appName == "Microsoft Internet Explorer") && (parseInt(navigator.appVersion) >= 4)) // IE (4+) only
+document.write('<a href="#" id="copy" onclick="copyToClipboard(document.getElementById(\'copytext1\').innerText)">Copy to clipboard<\/a>');
+</script>
+</div>
+</div>
+<div class="codeSnippetContainerCode" dir="ltr" id="copytext1">
+<pre>
+<span>' Force a reboot
+Set oAutoIt = WScript.CreateObject("AutoItX3.Control")
+oAutoIt.Shutdown 6
+</span><br />
+</pre>
+</div>
+</div>
+</div>
+</body>
+</html>
