@@ -1,6 +1,6 @@
 using System.Management.Automation;
 
-namespace AutoIt.AutoItX.PowerShell;
+namespace AutoIt.PowerShell;
 
 [Cmdlet("Invoke", "AU3Run")]
 public class Invoke_AU3Run : PSCmdlet

@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System;
 
-namespace AutoIt.AutoItX.PowerShell;
+namespace AutoIt.PowerShell;
 
 #region Enums
 public enum AU3Option
@@ -91,7 +91,8 @@ public class OptionArgumentCompleter : IArgumentCompleter
         IDictionary fakeBoundParameters)
     {
         var resultList = new List<CompletionResult>();
-        AU3Option selectedOption = (AutoItX.PowerShell.AU3Option)(fakeBoundParameters.Contains("Option") ? fakeBoundParameters["Option"] : null);
+        if (!fakeBoundParameters.Contains("Option") || fakeBoundParameters["Option"] is not AU3Option selectedOption)
+            return resultList;
 
         switch (selectedOption)
         {

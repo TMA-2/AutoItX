@@ -1,6 +1,6 @@
 using System.Management.Automation;
 
-namespace AutoIt.AutoItX.PowerShell;
+namespace AutoIt.PowerShell;
 
 [Cmdlet("Move", "AU3Mouse")]
 public class Move_AU3Mouse : PSCmdlet

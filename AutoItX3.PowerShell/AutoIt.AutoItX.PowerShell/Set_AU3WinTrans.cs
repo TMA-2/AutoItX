@@ -1,7 +1,7 @@
 using System;
 using System.Management.Automation;
 
-namespace AutoIt.AutoItX.PowerShell;
+namespace AutoIt.PowerShell;
 
 [Cmdlet("Set", "AU3WinTrans")]
 public class Set_AU3WinTrans : PSCmdlet

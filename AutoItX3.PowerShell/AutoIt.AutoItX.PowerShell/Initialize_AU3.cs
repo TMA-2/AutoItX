@@ -1,6 +1,6 @@
 using System.Management.Automation;
 
-namespace AutoIt.AutoItX.PowerShell;
+namespace AutoIt.PowerShell;
 
 [Cmdlet("Initialize", "AU3")]
 public class Initialize_AU3 : PSCmdlet

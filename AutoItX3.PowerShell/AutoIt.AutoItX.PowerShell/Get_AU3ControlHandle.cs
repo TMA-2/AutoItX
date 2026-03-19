@@ -1,7 +1,7 @@
 using System;
 using System.Management.Automation;
 
-namespace AutoIt.AutoItX.PowerShell;
+namespace AutoIt.PowerShell;
 
 /// <summary>
 /// Retrieves the internal handle (HWND) of a control. This handle can be used for advanced control manipulation and is useful for automation scripts that need to work with control handles directly.

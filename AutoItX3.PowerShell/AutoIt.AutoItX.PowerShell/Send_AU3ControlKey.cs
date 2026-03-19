@@ -1,7 +1,7 @@
 using System;
 using System.Management.Automation;
 
-namespace AutoIt.AutoItX.PowerShell;
+namespace AutoIt.PowerShell;
 
 [Cmdlet("Send", "AU3ControlKey", DefaultParameterSetName = "Text")]
 public class Send_AU3ControlKey : PSCmdlet

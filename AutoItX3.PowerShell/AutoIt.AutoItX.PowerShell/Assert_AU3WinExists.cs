@@ -1,7 +1,7 @@
 using System;
 using System.Management.Automation;
 
-namespace AutoIt.AutoItX.PowerShell;
+namespace AutoIt.PowerShell;
 
 /// <summary>
 /// Checks if a window with the specified properties exists.

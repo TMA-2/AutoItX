@@ -1,7 +1,7 @@
 using System;
 using System.Management.Automation;
 
-namespace AutoIt.AutoItX.PowerShell;
+namespace AutoIt.PowerShell;
 
 [Cmdlet("Move", "AU3Control", DefaultParameterSetName = "Text")]
 public class Move_AU3Control : PSCmdlet
