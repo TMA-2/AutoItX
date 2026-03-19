@@ -1,7 +1,7 @@
 using System;
 using System.Management.Automation;
 
-namespace AutoIt.AutoItX.PowerShell;
+namespace AutoIt.PowerShell;
 
 /// <summary>
 /// Closes a window gracefully or forcefully terminates it.
@@ -95,13 +95,11 @@ public class Close_AU3Win : PSCmdlet
     {
         get
         {
-            //IL_0006: Unknown result type (might be due to invalid IL or missing references)
-            return SwitchParameter.op_Implicit(force);
+            return force;
         }
         set
         {
-            //IL_0001: Unknown result type (might be due to invalid IL or missing references)
-            force = SwitchParameter.op_Implicit(value);
+            force = value;
         }
     }
 

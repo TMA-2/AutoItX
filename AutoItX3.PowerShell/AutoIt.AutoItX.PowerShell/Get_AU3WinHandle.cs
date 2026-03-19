@@ -1,6 +1,6 @@
 using System.Management.Automation;
 
-namespace AutoIt.AutoItX.PowerShell;
+namespace AutoIt.PowerShell;
 
 /// <summary>
 /// Retrieves the handle of a window based on its title and optional text.
@@ -87,13 +87,11 @@ public class Get_AU3WinHandle : PSCmdlet
     {
         get
         {
-            //IL_0006: Unknown result type (might be due to invalid IL or missing references)
-            return SwitchParameter.op_Implicit(asText);
+            return asText;
         }
         set
         {
-            //IL_0001: Unknown result type (might be due to invalid IL or missing references)
-            asText = SwitchParameter.op_Implicit(value);
+            asText = value;
         }
     }
 
