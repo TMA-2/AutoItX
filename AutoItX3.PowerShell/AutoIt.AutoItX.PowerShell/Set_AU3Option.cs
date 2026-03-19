@@ -91,7 +91,8 @@ public class OptionArgumentCompleter : IArgumentCompleter
         IDictionary fakeBoundParameters)
     {
         var resultList = new List<CompletionResult>();
-        AU3Option selectedOption = (AU3Option)(fakeBoundParameters.Contains("Option") ? fakeBoundParameters["Option"] : null);
+        if (!fakeBoundParameters.Contains("Option") || fakeBoundParameters["Option"] is not AU3Option selectedOption)
+            return resultList;
 
         switch (selectedOption)
         {
