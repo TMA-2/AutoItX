@@ -1,0 +1,11 @@
+MD013:
+    line_length: 240
+    heading_line_length: 80
+    code_blocks: false
+    severity: warning
+MD022:
+    lines_below: 0
+    severity: warning
+MD024: false
+MD032: false
+

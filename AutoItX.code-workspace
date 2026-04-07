@@ -3,6 +3,13 @@
     {
       "name": "AutoItX",
       "path": "."
+    },
+    {
+      "name": "AutoItX, The Second",
+      "path": "../AutoItX-Test"
+    },
+    {
+      "path": "../../AutoIt"
     }
   ],
   "settings": {
@@ -14,6 +21,9 @@
       "*.dll": "${basename}.xml, ${basename}.deps.json, ${basename}.pdb",
       "*.xml": "${basename}.Platform.${extname}, ${basename}.dll-Help.${extname}, ${basename}.Custom.dll-Help.${extname}",
       "*.psd1": "${capture}.psm1, ${capture}.ps1, ${capture}.format.ps1xml, ${capture}.types.ps1xml"
+    },
+    "files.associations": {
+      "*.{cs,vb,pss}proj": "msbuild",
     },
     "explorer.excludeGitIgnore": false,
     "files.exclude": {
@@ -34,19 +44,27 @@
         "pattern": "**/*.csproj"
       },
     ],
+    "xmlTools.enableXmlTreeView": false,
+    "autoit.includePaths": [
+      "C:\\Users\\e.dunhjo\\OneDrive - Texas Health Resources\\Scripts\\AutoIt\\Includes"
+    ],
+    "autoit.aiPath": "C:\\Users\\e.dunhjo\\OneDrive - Texas Health Resources\\Resources\\Apps\\AutoIt3",
     "powershell.cwd": "AutoItX",
     "powershell.powerShellDefaultVersion": "PowerShell (x64)",
     "powershell.codeFormatting.autoCorrectAliases": true,
     "powershell.pester.codeLens": false, // for Pester extension compatibility
     "poshProTools.statusBar.performanceVisibility": false,
     "dotnet.defaultSolution": "${workspaceFolder}/AutoItX3.PowerShell.sln",
-    "[csharp]": {
+    "[csharp][msbuild]": {
       "editor.maxTokenizationLineLength": 1000,
       "editor.formatOnType": true,
-      "editor.detectIndentation": false,
+      "editor.formatOnPaste": true,
+      "editor.autoIndentOnPaste": true,
+      "editor.detectIndentation": true,
+      "editor.indentSize": "tabSize",
       "editor.tabSize": 4,
-      "editor.autoIndentOnPaste": true
-    }
+    },
+    "editor.formatOnSaveMode": "modificationsIfAvailable"
   },
   "extensions": {
     "recommendations": [
@@ -64,10 +82,13 @@
       // XML
       "redhat.vscode-xml",
       "DotJoshJohnson.xml",
+      // AutoIt (which is better?)
+      "Damien.autoit",
+      "genius257.autoit",
       // Other
       "EditorConfig.EditorConfig",
       "vsls-contrib.codetour",
-      "Damien.autoit",
+      "DavidWang.ini-for-vscode",
       "yzhang.markdown-all-in-one",
       "george-alisson.html-preview-vscode"
     ],
