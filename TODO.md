@@ -1,0 +1,13 @@
+# TODO
+- [ ] Adding full module documentation
+  - [ ] Generating Markdown and MAML help with [PlatyPS](https://learn.microsoft.com/en-us/powershell/utility-modules/platyps/create-help-using-platyps?view=ps-modules)
+- [ ] Adding AutoItX3.Assembly.xml documentation for general .NET projects
+- [ ] Adding AutoItX3.PowerShell.xml documentation for the PowerShell module
+  - [ ] Adding [in-line XMLDoc](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/xmldoc/) for both
+  - [ ] Using the [`<include>` tag](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/xmldoc/recommended-tags#include) to reference the XML files in the XMLDoc so it doesn't have to be duplicated.
+- [ ] Making the cmdlets' functionality adhere to [PowerShell best practices](https://learn.microsoft.com/en-us/powershell/scripting/developer/cmdlet/required-development-guidelines?view=powershell-5.1).
+- [ ] Adding argument completion and more parameters for ease-of-use.
+  - [ ] Where parameters use an int to define an option, using an enum instead so they can be used without constantly having to look up the documentation.
+  - [ ] For cmdlets with many options like `Set-AU3Option`, adding a parameter for each option -- similar to how `Set-PSReadLineOption` works.
+  - [ ] Where it makes sense, using `ArgumentCompleter`.
+- [ ] Changing how success and failure is handled -- i.e. returning a value (Get) or nothing (Set, New) on success, and throwing an exception instead of returning 0 on failure.

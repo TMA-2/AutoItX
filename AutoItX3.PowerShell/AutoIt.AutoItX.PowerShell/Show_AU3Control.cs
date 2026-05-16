@@ -1,7 +1,7 @@
 using System;
 using System.Management.Automation;
 
-namespace AutoIt.AutoItX.PowerShell;
+namespace AutoIt.PowerShell;
 
 [Cmdlet("Show", "AU3Control", DefaultParameterSetName = "Text")]
 public class Show_AU3Control : PSCmdlet

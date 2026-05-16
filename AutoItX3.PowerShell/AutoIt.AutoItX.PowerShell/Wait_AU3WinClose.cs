@@ -1,7 +1,7 @@
 using System;
 using System.Management.Automation;
 
-namespace AutoIt.AutoItX.PowerShell;
+namespace AutoIt.PowerShell;
 
 [Cmdlet("Wait", "AU3WinClose", DefaultParameterSetName = "Text")]
 public class Wait_AU3WinClose : PSCmdlet

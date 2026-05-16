@@ -1,7 +1,7 @@
 using System;
 using System.Management.Automation;
 
-namespace AutoIt.AutoItX.PowerShell;
+namespace AutoIt.PowerShell;
 
 [Cmdlet("Invoke", "AU3ControlCommand", DefaultParameterSetName = "Text")]
 public class Invoke_AU3ControlCommand : PSCmdlet

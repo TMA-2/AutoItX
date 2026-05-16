@@ -1,6 +1,6 @@
 using System.Management.Automation;
 
-namespace AutoIt.AutoItX.PowerShell;
+namespace AutoIt.PowerShell;
 
 /// <summary>
 /// Gets the current mouse cursor ID.

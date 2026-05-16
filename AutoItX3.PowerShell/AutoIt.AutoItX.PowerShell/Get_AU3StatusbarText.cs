@@ -1,7 +1,7 @@
 using System;
 using System.Management.Automation;
 
-namespace AutoIt.AutoItX.PowerShell;
+namespace AutoIt.PowerShell;
 
 [Cmdlet("Get", "AU3StatusbarText")]
 public class Get_AU3StatusbarText : PSCmdlet

@@ -1,7 +1,7 @@
 using System;
 using System.Management.Automation;
 
-namespace AutoIt.AutoItX.PowerShell;
+namespace AutoIt.PowerShell;
 
 /// <summary>
 /// Retrieves the control identifier of the control that currently has focus within a window.

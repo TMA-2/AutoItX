@@ -1,6 +1,6 @@
 using System.Management.Automation;
 
-namespace AutoIt.AutoItX.PowerShell;
+namespace AutoIt.PowerShell;
 
 /// <summary>
 /// Checks if the current user has administrator privileges.

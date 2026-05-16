@@ -1,6 +1,6 @@
 using System.Management.Automation;
 
-namespace AutoIt.AutoItX.PowerShell;
+namespace AutoIt.PowerShell;
 
 [Cmdlet("Get", "AU3ErrorCode")]
 public class Get_AU3ErrorCode : PSCmdlet

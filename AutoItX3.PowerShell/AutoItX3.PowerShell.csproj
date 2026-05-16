@@ -13,11 +13,6 @@
     <PackageReference Include="Microsoft.PowerShell.5.ReferenceAssemblies" Version="1.1.0" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="AutoItX3.Assembly">
-        <HintPath>..\Module\AutoItX3.Assembly.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\AutoItX3.Assembly\AutoItX3.Assembly.csproj" />
   </ItemGroup>
 </Project>

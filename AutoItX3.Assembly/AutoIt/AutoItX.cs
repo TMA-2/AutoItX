@@ -2,7 +2,6 @@ using System;
 using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Text;
-using AutoItX3.Assembly.AutoIt;
 
 namespace AutoIt;
 
@@ -17,7 +16,7 @@ public static class AutoItX
     public const int INTDEFAULT = -2147483647;
 
     /// <summary>
-    ///
+    /// Hides the window and activates another window.
     /// </summary>
     public const int SW_HIDE = 0;
 
@@ -47,12 +46,12 @@ public static class AutoItX
     public const int SW_MAXIMIZE = 3;
 
     /// <summary>
-    ///
+    /// Displays the window in its current size and position. This value is similar to SW_SHOW, except the window is not activated.
     /// </summary>
     public const int SW_SHOWNOACTIVATE = 4;
 
     /// <summary>
-    ///             Activates the window and displays it in its current size and position.
+    /// Activates the window and displays it in its current size and position.
     /// </summary>
     public const int SW_SHOW = 5;
 
